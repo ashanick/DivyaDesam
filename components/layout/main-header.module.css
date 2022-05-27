@@ -1,0 +1,6 @@
+.header {
+    background-color: var(--dark);
+    height: 5.5rem;
+    color: var(--off-white); 
+    margin-top: -1rem;
+}
