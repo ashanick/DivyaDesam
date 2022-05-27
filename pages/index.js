@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
 
       <div>
-        <h1>Asha Iyengar here</h1>
+        <h1>6: Asha Iyengar here Adding Clans IoDash</h1>
         Let us see how to build this new one without deployment error
       </div>
     </div>

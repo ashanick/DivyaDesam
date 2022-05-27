@@ -76,7 +76,10 @@
     /* background-color: aqua; */
 }
 
-.icons__main{
-    margin: 0;
-}
+    .icons__main{
+        margin: 0;
+    }
+    .fcopy{
+        margin-left: 2rem;;
+    }
 }
