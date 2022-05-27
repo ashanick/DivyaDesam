@@ -2,7 +2,8 @@
     width: 100%;
     align-items: baseline;
     /* padding: 0 5rem; */
-    background-color: var(--dark);
+    background-color: var(--black);
     color: var(--off-white);
     padding-bottom: 2rem;;
+    /* margin-left: -5px;; */
 }
