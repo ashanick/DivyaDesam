@@ -1,7 +1,7 @@
 function Layout(props) {
     return (
         <div>
-            Hello Layout
+            Hello Layout 1
         </div>
     )
 }
