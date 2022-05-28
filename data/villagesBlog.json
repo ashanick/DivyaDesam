@@ -1,0 +1,22 @@
+{
+    "data": [
+        {"id": "b1", "name": "Kodavasal", "title": "Asha's visit", 
+            "author": "Asha Sundararajan", "imageURL": "images/RathaBandham.jpg",
+            "description": "1000 amazingly individual crafted and carved stone columns greet you as you walk into the Rajagopal temple. From the elephant to Komalavalli thayar to Haridra Nadhi this journey is accentuated by the ratham in the main hall.",
+            "blogDate": "May 2022",
+            "photoList": [
+                {"pid": "pid11", "imageURL": "images/RathaBandham.jpg", "title": "Ahs1"},
+                {"pid": "pid12", "imageURL": "images/RathaBandham.jpg", "title": "Ahs2"}
+             ]
+        },
+        {"id": "b2", "name": "Kumbakonam", "title": "Asha's visit", 
+            "author": "Asha Sundararajan", "imageURL": "images/RathaBandham.jpg",
+            "description": "1000 amazingly individual crafted and carved stone columns greet you as you walk into the Rajagopal temple. From the elephant to Komalavalli thayar to Haridra Nadhi this journey is accentuated by the ratham in the main hall.",
+            "blogDate": "May 2022",
+            "photoList": [
+                {"pid": "pid21", "imageURL": "images/RathaBandham.jpg", "title": "Ahs1"},
+                {"pid": "pid22", "imageURL": "images/RathaBandham.jpg", "title": "Ahs2"}
+             ]
+        }
+    ]
+}

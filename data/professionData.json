@@ -1,0 +1,25 @@
+{
+    "data": [
+        {"id": "p1", "name": "None"},
+        {"id": "p2", "name": "Accounts"},
+        {"id": "p11", "name": "Computer Engineer"},
+        {"id": "p12", "name": "Bachelors Sciences"},
+        {"id": "p13", "name": "Business"},
+        {"id": "p14", "name": "Crypto"},
+        {"id": "p4", "name": "Doctor"},
+        {"id": "p6", "name": "Engineer"},
+        {"id": "p3", "name": "Entrepreneur"},
+        {"id": "p15", "name": "Environmentalist"},
+        {"id": "p5", "name": "Finance"},
+        {"id": "p20", "name": "Government Service"},
+        {"id": "p19", "name": "Homemaker"},
+        {"id": "p7", "name": "Journalist"},
+        {"id": "p8", "name": "Lawyer"},
+        {"id": "p3", "name": "Management"},
+        {"id": "p9", "name": "Marketing"},
+        {"id": "p16", "name": "Musician"},
+        {"id": "p17", "name": "Professor"},
+        {"id": "p18", "name": "Teacher"},
+        {"id": "p10", "name": "Software Developer"}
+    ]
+}

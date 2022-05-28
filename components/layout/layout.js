@@ -6,7 +6,7 @@ function Layout(props) {
     return (
         <div>
             <MainHeader />
-            <main className="lockup">{props.children}</main>
+            <main >{props.children}</main>
             <hr style={{border: '1px solid red'}}/>
             <FooterSection />
         </div>

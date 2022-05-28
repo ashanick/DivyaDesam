@@ -51,14 +51,14 @@ function FooterSection(){
                 </div>
                 <div className={classes.footercontentothers}>
                     <h3>Resources Used</h3>
-                    <hr style={{border: '1px solid red'}}/>
+                    <hr style={{border: '1px solid red' , marginRight: '2rem'}}/>
                     <ul>
                         <li>Many Icons from FlatIcons</li>
                     </ul>
                 </div>
             </div>
             <div className={classes.fcopy}> 
-            <hr style={{border: '1px solid red'}}/>
+            <hr style={{border: '1px solid red', marginRight: '1rem'}}/>
                 Copyrights Reserved @Asha Sundararajan
                 {/* <hr style={{border: '1px solid red'}}/> */}
             </div>

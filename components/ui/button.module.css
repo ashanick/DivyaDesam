@@ -1,0 +1,41 @@
+.btn {
+    text-decoration: none;
+    cursor: pointer;
+    font: inherit;
+    background-color: red;
+    border: 1px solid #03be9f;
+    border-radius: 6px;
+    color: #dafff7;
+    padding: 0.5rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .btnlarge{
+    text-decoration: none;
+    cursor: pointer;
+    font: inherit;
+    background-color: green;
+    border: 2px solid red;
+    border-radius: 6px;
+    color: white;
+    /* padding: 0.5rem 1.5rem; */
+    text-align: center;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    width: 45rem;
+    padding: 1rem;
+  }
+  
+  .btn:hover,
+  .btn:active {
+    background-color: #02afa1;
+    border-color: #02afa1;
+  }
+
+  @media (max-width: 768px) {
+    .btnlarge{
+      width: 26rem;
+      padding: 0;
+      margin: 0;
+    }
+  }

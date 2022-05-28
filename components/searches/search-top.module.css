@@ -1,0 +1,24 @@
+.maintop{
+    text-align: center;
+}
+
+.maintop h3{
+    color: red;
+}
+
+.maintop__links{
+    /* text-align: left; */
+    /* margin-left: 50rem; */
+    align-items: center;
+}
+
+.maintop__li{
+    list-style-position:inside;
+    list-style-type:symbols();
+}
+
+@media (max-width: 767px) {
+    .maintop{
+        margin: 1rem;
+    }
+}

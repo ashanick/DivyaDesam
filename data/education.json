@@ -1,0 +1,18 @@
+{
+    "data": [
+        {"id": "e1", "name": "None"},
+        {"id": "e2", "name": "Accounting & Finance"},
+        {"id": "e11", "name": "Bachelors Humanities"},
+        {"id": "e12", "name": "Bachelors Sciences"},
+        {"id": "e3", "name": "Business & Management"},
+        {"id": "e4", "name": "Doctor"},
+        {"id": "e5", "name": "Doctorate - Phd"},
+        {"id": "e6", "name": "Engineering"},
+        {"id": "e7", "name": "Journalism"},
+        {"id": "e8", "name": "Law & Government"},
+        {"id": "e9", "name": "Marketing"},
+        {"id": "e10", "name": "Masters"},
+        {"id": "e10", "name": "Technical Diploma"},
+        {"id": "e13", "name": "Undergrad"}
+    ]
+}

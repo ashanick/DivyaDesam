@@ -2,3 +2,10 @@
     max-width: 90vw;
     margin: 0 auto;
   }
+
+  @media (max-width: 768px) {
+    .lockup{
+      max-width: 95vw;
+      margin: 0 0.5rem;
+    }
+  }
