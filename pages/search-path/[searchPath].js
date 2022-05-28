@@ -28,7 +28,7 @@ function SearchAll (){
 
     if (error) {
         return (
-            <div><h1>Something went wrong .... Please try again</h1></div>
+            <div><h1>Something went wrong .... Please try again ... error</h1></div>
         )
     }
 
@@ -91,6 +91,9 @@ function SearchAll (){
                 {members && 
                     <UsersGrid  
                         items={members.membersData} />
+                }
+                {!members &&
+                    <div>Sorry Something awfully wrong </div>
                 }
             </div>
         </div>

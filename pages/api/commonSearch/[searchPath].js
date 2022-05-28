@@ -106,8 +106,8 @@ export default function handler({query: {searchPath}}, res) {
         }
       })
       .catch(function(error){
-          // console.log('Kolaveri : ', error)
+          console.log('Kolaveri : ', error)
           res.status(201)
-            .json({message: "Ioyooo"})
+            .json({message: "Ioyooo", error: error})
     })
 }
