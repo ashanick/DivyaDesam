@@ -1,0 +1,61 @@
+.grid {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    background-color: green;
+    text-align: center;
+    min-width: 15rem;
+    /* this feature changes card width */
+    max-width: 20rem;
+  }
+  
+  .grid a {
+    color: var(--color-grey-100);
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    max-width: 20rem;
+    max-height: 20rem;
+    overflow: hidden;
+  }
+  
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:top;
+  }
+  
+  .content {
+    padding: var(--size-4);
+  }
+  
+  .content h3 {
+    margin: var(--size-1) 0;
+    font-size: var(--size-3);
+  }
+  
+  .content time {
+    font-style: italic;
+    color: var(--color-grey-300);
+  }
+  
+  .content p {
+    line-height: var(--size-6);
+  }
+
+  .showButtonDetails{
+    align-items: center;
+    margin-bottom: 0.5rem;  
+  }
+
+  @media (max-width: 768px) {
+    .grid {
+      min-width: 13rem;
+      max-width: 13rem;
+    }
+    .image{
+      width: 13rem;
+      max-width: 13rem;
+    }
+  }

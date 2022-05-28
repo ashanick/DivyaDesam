@@ -1,0 +1,36 @@
+.users {
+    /* width: 95%;
+    max-width: 100rem;
+    margin: var(--size-6) auto; */
+    list-style: none;
+    /* margin: 0 auto; */
+    padding: 0;
+    width: 100%;
+    /* width: 40rem; */
+    /* This width is important for the wrapping around of the indiv
+    cards */
+    max-width: 150rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-gap: 1rem;
+  }
+  
+  .users h1 {
+    font-size: var(--size-8);
+    color: var(--color-grey-800);
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+    .users h1 {
+      font-size: var(--size-16);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .users {
+      width: 29rem;
+      margin: 0 -4rem;
+    } 
+  }
