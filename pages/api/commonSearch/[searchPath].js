@@ -71,13 +71,13 @@ export default function handler({query: {searchPath}}, res) {
 
     searchStatement = searchStatement + ' Return m'
 
-    // console.log('🙌🙌🤳🤳 Where Clause : ', searchStatement)
+    console.log('🙌🙌🤳🤳 Where Clause : ', searchStatement)
     var membersList  = []
     session
       .run(`${searchStatement}`)
       .then(function(result){
-        // console.log('In success')
-        // console.log('Length ' , result.records)
+        console.log('In success')
+        console.log('Length ' , result.records)
 
         result.records.forEach(function(record){
           // console.log('Record : ', record._fields[0])
@@ -96,7 +96,7 @@ export default function handler({query: {searchPath}}, res) {
           }
         })
         const membersData = {members: _.uniqBy(membersList, "id")}
-        // console.log('Members ', membersData)
+        console.log('Members ', membersData)
         if (membersList){
             res.status(200)
                 .json({membersData: membersData})
