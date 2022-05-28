@@ -9,7 +9,6 @@ export default function Home() {
       <Head>
         <title>1000+ Iyengars</title>
         <meta name="description" content="Network of 8+ generations of Iyengars" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div>

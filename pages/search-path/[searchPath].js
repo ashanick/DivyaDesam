@@ -9,9 +9,10 @@ const fetcher = async(url) => {
     // console.log('Common Search In fetcher', url)
     const res = await fetch(url)
     const data = await res.json()
-    // console.log('In fetcher Common Search', data)
+    console.log('In fetcher Common Search', data)
     if (res.status !== 200) {
-        throw new Error(data.message)
+        console.log('In Fetcher Error')
+        return error
     }
 
     return data
