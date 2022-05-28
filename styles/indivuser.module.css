@@ -1,0 +1,56 @@
+.image {
+    margin: 1rem;
+  
+      width: 100%;
+      max-height: 20rem;
+      overflow: hidden;
+  }
+    
+    .image img {
+      object-fit: cover;
+    }
+  
+  .indivuser {
+    background-color: aqua;
+    display: flex;
+    grid-template-columns: 30rem auto;
+    gap: 1.5rem;
+    align-content: center;
+  }
+
+  .slug__graph{
+    margin: 0 8rem;
+    /* background-color: aquamarine; */
+  }
+
+  .slug__main{
+    width: 90vw;
+    margin: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .users__grid{
+    margin: 0;
+  }
+
+  .user__main {
+    /* margin: 1rem; */
+    display:flex;
+    flex-wrap: wrap;
+    grid-gap: 1rem;
+  }
+
+  .u1u2__main{
+    margin: 0 2rem;
+  }
+
+@media (max-width: 767px) {
+  .users__grid{
+    margin: 0 4rem;
+  }
+
+  .slug__graph{
+    margin: auto;
+  }
+}
