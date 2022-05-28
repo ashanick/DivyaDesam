@@ -21,7 +21,23 @@ function SearchAll (){
     const router = useRouter()
     const searchPath = router.query.searchPath
     // console.log('Search Path Common Search : ', searchPath)
-    var members = []
+    const {data, error} = useSWR(
+        ()=> searchPath && `/api/commonSearch/${searchPath}`,
+        fetcher
+    )
+
+    if (error) {
+        return (
+            <div><h1>Something went wrong .... Please try again</h1></div>
+        )
+    }
+
+    if (!data) {
+        return (
+            <div>Please wait 🙌🙌 Ultra large database 💥💥💥 Free too Yupeeeeeee 🤳🤳🤳🤳</div>
+        )
+    }
+    
     var searchText = 'Searched Criteria'
     if(searchPath){
         const xx = searchPath.split('+')
@@ -51,24 +67,8 @@ function SearchAll (){
         )
     }
 
-    const {data, error} = useSWR(
-        ()=> searchPath && `/api/commonSearch/${searchPath}`,
-        fetcher
-    )
-
-    if (error) {
-        return (
-            <div><h1>Something went wrong .... Please try again</h1></div>
-        )
-    }
-
-    if (!data) {
-        return (
-            <div>Please wait 🙌🙌 Ultra large database 💥💥💥 Free too Yupeeeeeee 🤳🤳🤳🤳</div>
-        )
-    }
-
     // console.log('Kolaveri Data1 ', data)
+    var members = []
     members = data
 
     // console.log('Members asearchlpha ', members)
