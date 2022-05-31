@@ -4,23 +4,29 @@ import { useRouter } from 'next/router';
 import useSWR from 'swr'
 import UsersGrid from '../../components/users/users-grid'
 import classes from '../../styles/indivuser.module.css'
+import { useEffect, useState } from "react";
 
 const fetcher = async(url) => {
     // console.log('Common Search In fetcher', url)
     const res = await fetch(url)
     const data = await res.json()
+    const status = data.status
     console.log('In fetcher Common Search', data)
+
     if (res.status !== 200) {
         console.log('In Fetcher Error')
         return error
     }
-
+    console.log('Returning data and Status', status)
     return data
 }
 
 function SearchAll (){
     const router = useRouter()
     const searchPath = router.query.searchPath
+    var isLoading = true
+    
+    var members = []
     // console.log('Search Path Common Search : ', searchPath)
     const {data, error} = useSWR(
         ()=> searchPath && `/api/commonSearch/${searchPath}`,
@@ -29,16 +35,28 @@ function SearchAll (){
 
     if (error) {
         return (
-            <div><h1>Something went wrong .... Please try again ... error</h1></div>
+            <div style={{margin: '5rem', textAlign: 'center'}}>
+               <h2> 💥💥💥💥💥💥 Oops Send valid Request 💥💥💥 </h2>
+            </div>
         )
     }
 
-    if (!data) {
+    if (data) {
+        console.log('Setting Member State')
+        members = data
+        console.log('Length of members', data.membersData.members)
+        isLoading = false
+    }
+
+    if (isLoading) {
         return (
-            <div>Please wait 🙌🙌 Ultra large database 💥💥💥 Free too Yupeeeeeee 🤳🤳🤳🤳</div>
+            <div style={{margin: '5rem', textAlign: 'center'}}>
+               <h2> Please wait 🙌🙌 Ultra large database 💥💥💥 Free too Yupeeeeeee 🤳🤳🤳🤳</h2>
+            </div>
         )
     }
     
+    console.log('What is in data', data.membersData)
     var searchText = 'Searched Criteria'
     if(searchPath){
         const xx = searchPath.split('+')
@@ -69,10 +87,8 @@ function SearchAll (){
     }
 
     // console.log('Kolaveri Data1 ', data)
-    var members = []
-    members = data
 
-    // console.log('Members asearchlpha ', members)
+    console.log('Members asearchlpha ', isLoading)
 
     return (
         <div>
@@ -89,13 +105,12 @@ function SearchAll (){
              </div>
              
             <div className={classes.users__grid}>
-                {members && 
+                {
+                    !isLoading && 
                     <UsersGrid  
-                        items={members.membersData} />
+                    items={members.membersData} />
                 }
-                {!members &&
-                    <div>Sorry Something awfully wrong </div>
-                }
+                
             </div>
         </div>
     )

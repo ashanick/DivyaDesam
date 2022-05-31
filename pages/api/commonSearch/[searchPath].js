@@ -71,12 +71,12 @@ export default function handler({query: {searchPath}}, res) {
 
     searchStatement = searchStatement + ' Return m'
 
-    console.log('🙌🙌🤳🤳 Where Clause : ', searchStatement)
+    // console.log('🙌🙌🤳🤳 Where Clause : ', searchStatement)
     var membersList  = []
     session
       .run(`${searchStatement}`)
       .then(function(result){
-        console.log('In success')
+        // console.log('In success')
         // console.log('Length ' , result.records)
 
         result.records.forEach(function(record){
@@ -96,19 +96,19 @@ export default function handler({query: {searchPath}}, res) {
           }
         })
         const membersData = {members: _.uniqBy(membersList, "id")}
-        // console.log('Members ', membersData)
-        if (membersList){
-            console.log('Sending members')
+        // console.log('Members ', membersList.length)
+        if (membersList.length > 0){
+            // console.log('Sending members')
             res.status(200)
-                .json({membersData: membersData})
+                .json({membersData: membersData, message: "Declaring Victory", status: '200'})
         } else {
-            console.log('Sending fetch error')
+            // console.log('Sending fetch error')
             res.status(201)
-            .json({message: "Ioyooo Empty List"})
+            .json({message: "Ioyooo Empty List", status: '201'})
         }
       })
       .catch(function(error){
-          console.log('Kolaveri : ', error)
+        //   console.log('Kolaveri : ', error)
           res.status(201)
             .json({message: "Ioyooo", error: error})
     })
