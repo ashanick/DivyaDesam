@@ -1,10 +1,12 @@
 import _ from "lodash";
 var neo4j = require('neo4j-driver');
+const uname = process.env.neo4j_username
+console.log('UserName ', uname)
 var driver = neo4j.driver(  
     "neo4j+s://6c5afb5b.databases.neo4j.io",
-    neo4j.auth.basic("neo4j", "kXQvU8aeNdreD6LeEdSPtA29TlwHz2LgvN2OoM2brl0")
+    neo4j.auth.basic(process.env.neo4j_username, process.env.neo4j_password)
   );
-
+console.log('Driver', driver)
 var session = driver.session();
 export default function handler({query: {searchPath}}, res) {
     // console.log('Boom Boom Boom Common Search +++ 💥💥💥💥💥💥💥 V2 Boom : ', searchPath)
