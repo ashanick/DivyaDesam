@@ -73,7 +73,7 @@ export default function handler({query: {searchPath}}, res) {
 
     searchStatement = searchStatement + ' Return m'
 
-    console.log('🙌🙌🤳🤳 Where Clause : ', searchStatement)
+    // console.log('🙌🙌🤳🤳 Where Clause : ', searchStatement)
     var msg = ''
     var membersList  = []
     session
@@ -81,14 +81,15 @@ export default function handler({query: {searchPath}}, res) {
       .then(function(result){
           msg = msg + 'In success : ' + result.records.length
         // console.log('In success')
-        console.log('Length ' , result.records.length)
+        // console.log('Length ' , result.records.length)
 
         result.records.forEach(function(record){
           // console.log('Record : ', record._fields[0])
           msg = msg + "In records"
           const temp = record._fields[0]
           // console.log('Temp ', temp)
-        //   if (temp !== null){
+          if (temp !== null){
+                msg = msg + " Not null : "
             if (record._fields[1]) {
               // console.log('Here I am what', record._fields[1])
             }
@@ -98,7 +99,7 @@ export default function handler({query: {searchPath}}, res) {
                 name: record._fields[0].properties.name,
                 imageURL: record._fields[0].properties.imageURL
             })
-        //   }
+          }
         })
         const membersData = {members: _.uniqBy(membersList, "id")}
         msg = msg + " Total member tried : " + membersData.members.length
@@ -113,7 +114,7 @@ export default function handler({query: {searchPath}}, res) {
         } 
       })
       .catch(function(error){
-          // console.log('Kolaveri : ', error)
+          console.log('Kolaveri : ', error)
           res.status(201)
             .json({message: "Ioyooo in Catch Error", error: error, status: 201})
     })
