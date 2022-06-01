@@ -87,7 +87,7 @@ export default function handler({query: {searchPath}}, res) {
           // console.log('Record : ', record._fields[0])
           const temp = record._fields[0]
           // console.log('Temp ', temp)
-          if (temp !== null){
+        //   if (temp !== null){
             if (record._fields[1]) {
               // console.log('Here I am what', record._fields[1])
             }
@@ -97,7 +97,7 @@ export default function handler({query: {searchPath}}, res) {
                 name: record._fields[0].properties.name,
                 imageURL: record._fields[0].properties.imageURL
             })
-          }
+        //   }
         })
         const membersData = {members: _.uniqBy(membersList, "id")}
         msg = msg + " Total member tried : " + membersData.members.length
