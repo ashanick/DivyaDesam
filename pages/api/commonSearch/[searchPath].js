@@ -6,10 +6,10 @@ var driver = neo4j.driver(
     "neo4j+s://6c5afb5b.databases.neo4j.io",
     neo4j.auth.basic(process.env.neo4j_username, process.env.neo4j_password)
   );
-console.log('Driver', driver)
+// console.log('Driver', driver)
 var session = driver.session();
 export default function handler({query: {searchPath}}, res) {
-    // console.log('Boom Boom Boom Common Search +++ 💥💥💥💥💥💥💥 V2 Boom : ', searchPath)
+    console.log('Boom Boom Boom Common Search +++ 💥💥💥💥💥💥💥 V2 Boom : ', searchPath)
     const xx = searchPath.split('+')
     // console.log('XX Splits', xx[0], "ancestry Split: ", xx[1], ' City Split: ', xx[2])
     var searchStatement = '';
@@ -73,7 +73,7 @@ export default function handler({query: {searchPath}}, res) {
 
     searchStatement = searchStatement + ' Return m'
 
-    // console.log('🙌🙌🤳🤳 Where Clause : ', searchStatement)
+    console.log('🙌🙌🤳🤳 Where Clause : ', searchStatement)
     var membersList  = []
     session
       .run(`${searchStatement}`)
@@ -98,20 +98,19 @@ export default function handler({query: {searchPath}}, res) {
           }
         })
         const membersData = {members: _.uniqBy(membersList, "id")}
-        // console.log('Members ', membersList.length)
-        if (membersList.length > 0){
-            // console.log('Sending members')
+        // console.log('Members ', membersData)
+        // if (membersData){
+        //     console.log('There is data', membersData)
+        // }
+        if (membersData){
+            // console.log('Stupid Come here : ', membersData)
             res.status(200)
-                .json({membersData: membersData, message: "Declaring Victory", status: '200'})
-        } else {
-            // console.log('Sending fetch error')
-            res.status(201)
-            .json({message: "Ioyooo Empty List", status: '201'})
-        }
+                .json({membersData: membersData, status: 200})
+        } 
       })
       .catch(function(error){
-        //   console.log('Kolaveri : ', error)
+          // console.log('Kolaveri : ', error)
           res.status(201)
-            .json({message: "Ioyooo", error: error})
+            .json({message: "Ioyooo in Catch Error", error: error, status: 201})
     })
 }

@@ -11,6 +11,7 @@ const fetcher = async(url) => {
     const res = await fetch(url)
     const data = await res.json()
     const status = data.status
+    var mtyArray = false
     console.log('In fetcher Common Search', data)
 
     if (res.status !== 200) {
@@ -33,19 +34,19 @@ function SearchAll (){
         fetcher
     )
 
-    if (error) {
-        return (
-            <div style={{margin: '5rem', textAlign: 'center'}}>
-               <h2> 💥💥💥💥💥💥 Oops Send valid Request 💥💥💥 </h2>
-            </div>
-        )
-    }
-
     if (data) {
-        console.log('Setting Member State')
+        // console.log('Setting Member State')
         members = data
         console.log('Length of members', data.membersData.members)
         isLoading = false
+
+        if (data.membersData.members.length === 0) {
+            return (
+                <div style={{margin: '5rem', textAlign: 'center'}}>
+                   <h2> 💥💥💥💥💥💥 Oops Send valid Request 💥💥💥 </h2>
+                </div>
+            )
+        }
     }
 
     if (isLoading) {
@@ -56,7 +57,7 @@ function SearchAll (){
         )
     }
     
-    console.log('What is in data', data.membersData)
+    // console.log('What is in data', data.membersData)
     var searchText = 'Searched Criteria'
     if(searchPath){
         const xx = searchPath.split('+')
@@ -79,7 +80,7 @@ function SearchAll (){
     }
 
     // console.log('Query router Aiyaa', router.query)
-    // console.log('User Detail, Part 2', searchPath)
+    console.log('User Detail, Part 2', searchPath)
     if (searchPath === null) {
         return (
             <div>Please send city request with correct credentials</div>
@@ -88,7 +89,7 @@ function SearchAll (){
 
     // console.log('Kolaveri Data1 ', data)
 
-    console.log('Members asearchlpha ', isLoading)
+    // console.log('Members asearchlpha ', isLoading)
 
     return (
         <div>
