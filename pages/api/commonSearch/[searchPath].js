@@ -98,14 +98,15 @@ export default function handler({query: {searchPath}}, res) {
           }
         })
         const membersData = {members: _.uniqBy(membersList, "id")}
-        // console.log('Members ', membersData)
+        const msg = "Total member tried : " + membersData.members.length
+        // console.log('Members ', msg)
         // if (membersData){
         //     console.log('There is data', membersData)
         // }
         if (membersData){
             // console.log('Stupid Come here : ', membersData)
             res.status(200)
-                .json({membersData: membersData, status: 200})
+                .json({membersData: membersData, status: 200, msg})
         } 
       })
       .catch(function(error){
