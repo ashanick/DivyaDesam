@@ -74,12 +74,14 @@ export default function handler({query: {searchPath}}, res) {
     searchStatement = searchStatement + ' Return m'
 
     console.log('🙌🙌🤳🤳 Where Clause : ', searchStatement)
+    var msg = ''
     var membersList  = []
     session
       .run(`${searchStatement}`)
       .then(function(result){
+          msg = msg + 'In success : ' + result.records.length
         // console.log('In success')
-        // console.log('Length ' , result.records)
+        console.log('Length ' , result.records.length)
 
         result.records.forEach(function(record){
           // console.log('Record : ', record._fields[0])
@@ -98,7 +100,7 @@ export default function handler({query: {searchPath}}, res) {
           }
         })
         const membersData = {members: _.uniqBy(membersList, "id")}
-        const msg = "Total member tried : " + membersData.members.length
+        msg = msg + " Total member tried : " + membersData.members.length
         // console.log('Members ', msg)
         // if (membersData){
         //     console.log('There is data', membersData)
