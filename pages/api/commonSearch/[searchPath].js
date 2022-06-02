@@ -83,7 +83,7 @@ export default function handler({query: {searchPath}}, res) {
 
         result.records.forEach(function(record){
         //   console.log('Record : ', record._fields[0])
-          msg = msg + "In records length : " + record._fields.length + ' ' 
+          msg = msg + "In records length : " + record._fields + ' ' 
         //   console.log('Record ', record._fields[0])
           if (record._fields[0] !== null){
                 msg = msg + " Not null : " + record._fields[0].properties.name + ' : '
