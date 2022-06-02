@@ -34,20 +34,28 @@ function SearchAll (){
         fetcher
     )
 
+    console.log('Message : ', data)
     if (data) {
         // console.log('Setting Member State')
         members = data
         console.log('Length of members', data.membersData.members)
         isLoading = false
 
-        const tempmsg = data.message
         if (data.membersData.members.length === 0) {
             return (
                 <div style={{margin: '5rem', textAlign: 'center'}}>
-                   <h2> 💥💥💥💥💥💥 Oops Send valid Request 💥💥💥  tempmsg</h2>
+                   <h2> 💥💥💥💥💥💥 Oops Send valid Request 💥💥💥</h2>
                 </div>
             )
         }
+    }
+
+    if (error) {
+        return (
+            <div style={{margin: '5rem', textAlign: 'center'}}>
+               <h2> 💥💥💥💥💥💥 Oops Send valid Request 💥💥💥  </h2>
+            </div>
+        )
     }
 
     if (isLoading) {
