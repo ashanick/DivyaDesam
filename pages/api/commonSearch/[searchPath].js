@@ -80,15 +80,12 @@ export default function handler({query: {searchPath}}, res) {
       .run(`${searchStatement}`)
       .then(function(result){
           msg = msg + 'In success : ' + result.records.length
-        // console.log('In success')
-        // console.log('Length ' , result.records.length)
 
         result.records.forEach(function(record){
         //   console.log('Record : ', record._fields[0])
-          msg = msg + "In records : " + record._fields[0].properties.name
-          const temp = record._fields[0]
-        //   console.log('Temp ', temp)
-          if (temp !== null){
+          msg = msg + "In records length : " + record._fields.length + ' ' 
+        //   console.log('Record ', record._fields[0])
+          if (record._fields[0] !== null){
                 msg = msg + " Not null : " + record._fields[0].properties.name + ' : '
             if (record._fields[1]) {
               // console.log('Here I am what', record._fields[1])
