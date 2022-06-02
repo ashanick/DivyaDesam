@@ -84,10 +84,10 @@ export default function handler({query: {searchPath}}, res) {
         // console.log('Length ' , result.records.length)
 
         result.records.forEach(function(record){
-          // console.log('Record : ', record._fields[0])
+        //   console.log('Record : ', record._fields[0])
           msg = msg + "In records"
           const temp = record._fields[0]
-          // console.log('Temp ', temp)
+        //   console.log('Temp ', temp)
           if (temp !== null){
                 msg = msg + " Not null : "
             if (record._fields[1]) {
@@ -100,12 +100,23 @@ export default function handler({query: {searchPath}}, res) {
                 imageURL: record._fields[0].properties.imageURL
             })
           }
+
+          msg = msg + " Pushing "
+        membersList.push({
+            id: record._fields[0].properties.name,
+            name: record._fields[0].properties.name,
+            imageURL: record._fields[0].properties.imageURL
         })
+        })
+
+        
+
+
         const membersData = {members: _.uniqBy(membersList, "id")}
         msg = msg + " Total member tried : " + membersData.members.length
         // console.log('Members ', msg)
         // if (membersData){
-        //     console.log('There is data', membersData)
+            console.log('There is data', membersData)
         // }
         if (membersData){
             // console.log('Stupid Come here : ', membersData)
