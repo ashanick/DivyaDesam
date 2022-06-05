@@ -20,6 +20,11 @@ function SearchConnections(){
     const router = useRouter()
     const searchPath = router.query.slug
     // console.log('Search Connections Api : ', searchPath)
+    
+    const {data, error} = useSWR(
+        ()=> searchPath && `/api/userconnection/${searchPath}`,
+        fetcher
+    )
     var isLoading = true
     var tempData 
     if(searchPath === null){
@@ -28,10 +33,6 @@ function SearchConnections(){
         )
     }
 
-    const {data, error} = useSWR(
-        ()=> searchPath && `/api/userconnection/${searchPath}`,
-        fetcher
-    )
 
     if (error){
         return (
