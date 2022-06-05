@@ -24,6 +24,11 @@ function SearchUser2 (){
     // console.log('U1U2 from query : ', searchPath)
     // console.log('1st Split', wp[0], '1st : ', wpSplit1)
     // console.log('WP Split 3rd part : ', wpSplit1[2])
+
+    const {data, error} = useSWR(
+        ()=> yy && `/api/commonSearch/${yy}`,
+        fetcher
+    )
     var members = []
     var user1 = ''
     // if (searchPath !== null) {
@@ -46,11 +51,6 @@ function SearchUser2 (){
             </div>
         )
     }
-
-    const {data, error} = useSWR(
-        ()=> yy && `/api/commonSearch/${yy}`,
-        fetcher
-    )
 
     if (error) {
         return (

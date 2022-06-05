@@ -22,6 +22,11 @@ function LinksUser1 (){
 
     // console.log('Query router Aiyaa', router.query)
     // console.log('In Links User 1', searchPath)
+
+    const {data, error} = useSWR(
+        ()=> searchPath && `/api/commonSearch/${searchPath}`,
+        fetcher
+    )
     if (searchPath === null) {
         return (
             <div style={{textAlign: 'center', marginTop: '5rem', marginBottom: '5rem'}}>
@@ -33,11 +38,6 @@ function LinksUser1 (){
     // return(
     //     <div>In Links User 1</div>
     // )
-
-    const {data, error} = useSWR(
-        ()=> searchPath && `/api/commonSearch/${searchPath}`,
-        fetcher
-    )
 
     if (error) {
         return (
