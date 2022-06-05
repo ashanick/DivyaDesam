@@ -1,0 +1,48 @@
+.image {
+    width: 30rem;
+    height: 20rem;
+    max-height: 30rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.image img {
+    object-fit: cover;
+    object-position:bottom;
+    width: 100%;
+    height: 100%;
+} 
+
+.intro{
+    margin: 1rem 4rem;
+    /* padding: 1rem 0; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-gap: 3rem;
+    /* background-color: aquamarine; */
+}
+
+.intro__content {
+    color: var(--black);
+    width: 50rem;
+}
+
+.ultext{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .intro{
+        margin: 1rem 0;
+    }
+    .intro__content{
+        margin: 0 ;
+        width: 28rem;
+        margin-top: -2.5rem;;
+    }
+
+    .image{
+        width: 90vw;
+    }
+}

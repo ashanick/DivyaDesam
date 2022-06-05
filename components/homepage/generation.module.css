@@ -1,0 +1,56 @@
+.gen{
+    margin: 1rem 4rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-gap: 1rem;
+}
+
+.gen__content{
+    width: 40rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.gen__example{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 40rem;
+    height: 20rem;
+    max-height: 50rem;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.image img {
+    object-fit: fill;
+    object-position:bottom;
+    width: auto;
+    height: auto;
+} 
+
+@media (max-width: 768px) {
+    .gen__content {
+        width: 30rem;
+        align-items: top;
+        margin-top: 0;
+        /* background-color: hotpink; */
+    }
+
+    .gen {
+        margin: 0 1rem;
+    }
+
+    .image{
+        width: 28rem;
+        height: auto;
+    }
+}

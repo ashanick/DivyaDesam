@@ -1,0 +1,15 @@
+.grid {
+    list-style: none;
+    margin: 1rem;
+    padding: 0;
+    /* background-color: aquamarine; */
+    max-width: 60rem;
+    align-content: center;
+  }
+      
+  @media (max-width: 768px) {
+  
+    .grid{
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    }
+  }

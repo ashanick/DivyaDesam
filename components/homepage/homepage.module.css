@@ -1,0 +1,91 @@
+.homepage{
+    margin-top: 1rem;;
+}
+
+.image {
+    width: auto;
+    height: auto;
+    max-height: 50rem;
+    overflow: hidden;
+}
+
+/* .image img {
+    object-fit: cover;
+    object-position:top;
+    width: 100%;
+    height: 100%;
+  } */
+
+.intro{
+    width: auto;
+    height: auto;
+    margin: 1rem 4rem;
+    display: flex;
+    grid-gap: 3rem;
+    justify-content: center;
+    background-color: antiquewhite;
+}
+
+.introtext{
+    /* width: 90vw; */
+    margin: 1rem 7rem;
+    /* background-color: chartreuse; */
+    text-align: center;
+}
+
+.introvillages{
+    margin: 1rem;
+    text-align: center;
+}
+
+.main__av{
+    margin: 0 4rem; 
+    color: blue;
+    /* background-color: darkorange; */
+}
+
+.villages{
+    margin: 1rem;
+}
+
+.welcome{
+    background-color: bisque;
+}
+
+.welcomeimage {
+    position: fixed;
+    height: 30vh;
+    width: 100vw;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.welcometext{
+    margin-top: -10rem;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .main__av{
+        margin: 1rem 1rem;
+    }
+
+    .welcome{
+        margin: 0 1rem;
+        display:block;
+    }
+
+    .introtext{
+        margin:1rem;
+        /* width: 80vw; */
+    }
+
+    .introvillages{
+        margin: 1rem;
+    }
+
+    .villages {
+        margin: 0rem;
+    }
+
+}

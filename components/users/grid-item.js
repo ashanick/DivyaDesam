@@ -30,10 +30,8 @@ function GridItem(props) {
                             placeholder='empty'
                             />
                     </div>
-                    <div className={classes.content}>
-                        <h3>{name}</h3>
-                    </div>
-            </a>
+                    <h3>{name}</h3>
+                </a>
             </Link>
         </li>
     )

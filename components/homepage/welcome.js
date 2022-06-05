@@ -17,7 +17,7 @@ function WelcomeBanner(){
             </div>
             <div className={classes.welcometext}>
                 <h1>Welcome to 1000+ Iyengars</h1>
-                A genealogy representing the Cauvery Delta Iyengars
+                <p>A genealogy representing the Cauvery Delta Iyengars</p>
             </div>
         </div>
     )

@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 import WelcomeBanner from '../components/homepage/welcome'
 import NewSearch from '../components/users/new-search'
+import HomePageComponent from '../components/homepage'
 
 export default function Home() {
   return (
@@ -14,10 +15,9 @@ export default function Home() {
       <div>
         <WelcomeBanner />
         <NewSearch type = "common"/>
-        <div className="lockup" style={{textAlign: 'center'}}>
-        <h1>Test 7: Asha Iyengar here Adding Clans IoDash</h1>
-        Let us see how to build this new one without deployment error
-        </div>     
+        {/* <div className="lockup" style={{textAlign: 'center'}}> */}
+            <HomePageComponent />
+        {/* </div>      */}
       </div>
     </div>
   )

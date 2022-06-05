@@ -1,19 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Josefin+Sans:wght@200;400&display=swap");
+
 html,
 body {
   font-family: Oswald, Cardo;
-  color: var(--dark);
+  color: var(--black);
   background-color: var(--off-white);
   /* color: var(--off-white);
   background-color: var(--dark); */
-  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Dancing+Script,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
+  color: red;
   text-decoration: none;
+  font-size: var(--font-size-lg); 
+  font-family: 'Dancing Script', cursive;
 }
 
 * {
   box-sizing: border-box;
+}
+
+h1{
+  color:red;
+  font-family: 'Dancing Script', cursive;
+  font-size: var(--font-size-xl);
+}
+
+h2{
+  color: red;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-bottom: 0;
+}
+
+h3{
+  color:red;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+p{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: var(--font-size-mdbet);
+}
+
+@media (max-width: 768px) {
+   a{
+   font-size: var(--font-size-mdlg); 
+  }
+
+  p{
+    font-size: larger; 
+   }
+
+   h1{
+    font-size: var(--font-size-lg); 
+   }
+
 }

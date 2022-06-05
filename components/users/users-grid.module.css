@@ -15,17 +15,11 @@
     flex-wrap: wrap;
     grid-gap: 1rem;
   }
-  
-  .users h1 {
-    font-size: var(--size-8);
-    color: var(--color-grey-800);
-    text-align: center;
-  }
-  
-  @media (min-width: 768px) {
-    .users h1 {
-      font-size: var(--size-16);
-    }
+
+  .users h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: var(--font-size-md);
+    margin: 1rem;
   }
 
   @media (max-width: 767px) {

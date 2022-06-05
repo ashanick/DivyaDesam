@@ -24,13 +24,13 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-top: -7rem;
+    margin-top: -4rem;
     transform: translate(-50%, -50%);
 }
 
-.welcometext h1{
+/* .welcometext h1{
     color: red;
-}
+} */
 
 @media (max-width: 768px) {
     .image img {
@@ -45,12 +45,12 @@
         margin-top: -2rem;
     }
 
-    .welcometext h1{
+    /* .welcometext h1{
         font-size: larger;
     }
 
     .welcometext h3{
         font-size: medium;
-    }
+    } */
 
 }

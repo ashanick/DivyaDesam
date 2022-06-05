@@ -1,0 +1,31 @@
+.post {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    /* background-color: var(--color-grey-800); */
+    text-align: center;
+    margin: 0.5rem ;
+    width: 25rem;
+    padding: 0.5rem 0;
+}
+
+.image {
+    width: auto;
+    max-width: 30rem;
+    max-height: 30rem;
+    overflow: hidden;
+}
+
+.image img {
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .post{
+        /* width: 29rem; */
+        margin: 0;
+        display: block;
+    }
+
+    /* .image {
+        width: 30rem;
+    } */
+}

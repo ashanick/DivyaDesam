@@ -71,7 +71,9 @@ function SearchForm(props) {
         <form className={classes.form} onSubmit={formSubmitHandler}>
             <div className={classes.wrap__search}>
             <div className={classes.main__query}>
-                <h3>Main Query</h3>
+                <h3 className={classes.mq__h3}>
+                    Main Query
+                </h3>
                 <div className={classes.main__query__club}>
                     <div className={classes.control}>
                         <label htmlFor="typename" className={classes.labelinput}>

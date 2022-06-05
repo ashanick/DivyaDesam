@@ -1,0 +1,27 @@
+.grid {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    /* width: 40rem; */
+    /* This width is important for the wrapping around of the indiv
+    cards */
+    max-width: 150rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-gap: 1rem;
+  }
+
+ 
+.grid h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: var(--font-size-mdbet);
+  margin: 1rem;
+}
+
+  @media (max-width: 767px) {
+    .grid {
+      width: 29rem;
+      /* margin: 0 -4rem; */
+    } 
+  } 

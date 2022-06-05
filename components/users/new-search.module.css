@@ -2,7 +2,7 @@
     /* background-color: grey; */
     /* display:flex; */
     width: auto;
-    margin: 1rem 6rem;
+    /* margin: 1rem 6rem; */
     padding:0
 }
 
@@ -11,6 +11,7 @@
   grid-gap: 1rem;
   justify-content: center;
   width:auto;
+  /* height: 7rem; */
 }
 
 .formreset{
@@ -44,6 +45,8 @@
 .formsubmitbutton{
   display: flex;
   justify-content: center;
+  margin-bottom: 0.5rem;
+  align-content: center;
   /* background-color: aqua; */
 }
 
@@ -53,20 +56,15 @@
   /* margin-left: 5rem; */
 }
 
-.labelinput h3 {
+/* .labelinput h3 {
   color: red;
-}
+} */
 
 .main__query{
-  border: 1px solid hotpink;
+  border: 1px solid red;
   text-align: center;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   width: auto;
-}
-
-.main__query h3{
-  color: red;
-  padding-bottom: 0.5rem;
 }
 
 .main__querytext{
@@ -76,12 +74,16 @@
 }
 
 .main__querytext h3{
-  color: red;
   text-align: center;
 }
 
 .main__query__club{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin-top: -1rem;;
+  margin-left: -1rem;
 }
 
 @media (min-width: 768px) {
@@ -97,10 +99,6 @@
     margin: 1rem 5rem;
   }
 
-  .h3{
-    font-size: small;
-  }
-
   .labelinput{
     margin-top: 2px;
     margin-right: 2px;
@@ -112,7 +110,6 @@
   }
 
   .formsubmitbutton{
-    margin: 0.5rem 0 1rem 2rem ;
     align-content: center;
     align-self: center;
   }

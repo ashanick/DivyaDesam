@@ -1,10 +1,12 @@
 .maintop{
     text-align: center;
+    width: 90vw;
+    margin-left: 2rem;;
 }
 
-.maintop h3{
+/* .maintop h3{
     color: red;
-}
+} */
 
 .maintop__links{
     /* text-align: left; */

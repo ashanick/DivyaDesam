@@ -21,6 +21,15 @@
   /* background-color: azure; */
 }
 
+.footercontentabout a, 
+.footercontentothers a
+{
+  color:var(--off-white);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: var(--font-size-md);
+  list-style:georgian
+}
+
 .footercontentothers {
   margin: 0.5rem;
   padding-left: 5rem;

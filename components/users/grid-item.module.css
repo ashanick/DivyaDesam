@@ -1,14 +1,13 @@
 .grid {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-    background-color: green;
+    /* background-color: green; */
+    
+    border: 1px solid green;
     text-align: center;
     min-width: 15rem;
+    width: 18rem;
     /* this feature changes card width */
     max-width: 20rem;
-  }
-  
-  .grid a {
-    color: var(--color-grey-100);
   }
   
   .image {
@@ -26,23 +25,6 @@
     object-position:top;
   }
   
-  .content {
-    padding: var(--size-4);
-  }
-  
-  .content h3 {
-    margin: var(--size-1) 0;
-    font-size: var(--size-3);
-  }
-  
-  .content time {
-    font-style: italic;
-    color: var(--color-grey-300);
-  }
-  
-  .content p {
-    line-height: var(--size-6);
-  }
 
   .showButtonDetails{
     align-items: center;
