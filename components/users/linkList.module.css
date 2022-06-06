@@ -1,0 +1,11 @@
+.grid {
+    /* box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); */
+    /* background-color: green; */
+    /* margin: 0 -10px 1rem 0; */
+    text-align: left;
+    padding: 0;
+    /* min-width: 18rem; */
+    /* this feature changes card width */
+    /* max-width: 20rem; */
+    list-style:inside;
+  }
