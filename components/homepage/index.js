@@ -63,7 +63,7 @@ function HomePageComponent(){
         }
         // console.log('Temp Villages : ', temp)
         setAncestralVillage(temp)
-    }, [citiesData])
+    }, [])
 
     var whatishappening = false
     if (!isDesktopSize) {
