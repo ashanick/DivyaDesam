@@ -22,9 +22,9 @@ function HomeIntro(){
             </Link>
             <div className={classes.intro__content}>
                 <h2>Why 1000+</h2>
-                <p>1000+ dreams is my
+                <p>'1000+ dreams is my
                     journey of finding joyful and inspirational stories of my ancestors. I grew up in a large extemded family, 
-                    but am aware of the inquisitive drive our far-flung next generation has about "Where do I come from?" 
+                    but am aware of the inquisitive drive our far-flung next generation has about \"Where do I come from?\" '
                 </p>
                 <p>Hi, I am Asha Sundararajan, an educator, entrepreneur, and environmentalist. I wanted to go beyond ancestry and genie or
                     other sites that give you just a family tree, name, a face, and a few details. I wanted to be able to:
