@@ -5,7 +5,7 @@ import classes from '../../styles/indivuser.module.css'
 import UsersGrid from '../../components/users/users-grid';
 
 const fetcher = async(url) => {
-    console.log('Search In fetcher U1 U2', url)
+    // console.log('Search In fetcher U1 U2', url)
     const res = await fetch(url)
     const data = await res.json()
     // console.log('In fetcher U1 U2', data)
@@ -41,7 +41,7 @@ function SearchConnections(){
             </div>
         )
     }
-    console.log('Data in Slug', data)
+    // console.log('Data in Slug', data)
 
     if (data){
         isLoading = false

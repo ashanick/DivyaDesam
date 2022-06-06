@@ -1,7 +1,7 @@
 import _ from "lodash";
 var neo4j = require('neo4j-driver');
 const uname = process.env.neo4j_username
-console.log('UserName ', uname)
+// console.log('UserName ', uname)
 var driver = neo4j.driver(  
     "neo4j+s://6c5afb5b.databases.neo4j.io",
     neo4j.auth.basic(process.env.neo4j_username, process.env.neo4j_password)
@@ -9,7 +9,7 @@ var driver = neo4j.driver(
 // console.log('Driver', driver)
 var session = driver.session();
 export default function handler({query: {searchPath}}, res) {
-    console.log('Boom Boom Boom Common Search +++ 💥💥💥💥💥💥💥 V2 Boom : ', searchPath)
+    // console.log('Boom Boom Boom Common Search +++ 💥💥💥💥💥💥💥 V2 Boom : ', searchPath)
     const xx = searchPath.split('+')
     // console.log('XX Splits', xx[0], "ancestry Split: ", xx[1], ' City Split: ', xx[2])
     var searchStatement = '';
@@ -82,7 +82,7 @@ export default function handler({query: {searchPath}}, res) {
           msg = msg + 'In success : ' + result.records.length
 
         result.records.forEach(function(record){
-        //   console.log('Record : ', record._fields[0])
+          // console.log('Record : ', record._fields[0])
           msg = msg + "In records length : " + record._fields + ' ' 
         //   console.log('Record ', record._fields[0])
           if (record._fields[0] !== null){
@@ -114,7 +114,7 @@ export default function handler({query: {searchPath}}, res) {
         } 
       })
       .catch(function(error){
-          console.log('Kolaveri : ', error)
+          // console.log('Kolaveri : ', error)
           res.status(201)
             .json({message: "Ioyooo in Catch Error", error: error, status: 201, msg})
     })
