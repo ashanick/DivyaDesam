@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import classes from './indiv-user.module.css'
-import LinkList from './linkList';
+import LinkList from './linkList.js';
 
 // import Card from '../ui/card'
 // import UserFamilyDetails from './user-familydetails';
