@@ -30,16 +30,18 @@ function UserDetailPage () {
     var photoState = false
     // console.log('Query router Aiyaa', router.query)
     // console.log('User Detail, Part 1', userName)
+    const {data, error} = useSWR(
+        ()=> userName && `/api/users/${userName}`,
+        fetcher
+    )
+    
     if (userName === null) {
         return (
             <div style={{margin: '2rem', textAlign: 'center'}}>Please send user request with correct credentials</div>
         )
     }
 
-    const {data, error} = useSWR(
-        ()=> userName && `/api/users/${userName}`,
-        fetcher
-    )
+
     
     if (error) {
         return (
