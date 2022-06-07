@@ -7,7 +7,7 @@ import classes from '../../styles/indivuser.module.css'
 import { useEffect, useState } from "react";
 
 const fetcher = async(url) => {
-    // console.log('Common Search In fetcher', url)
+    console.log('Common Search In fetcher', url)
     const res = await fetch(url)
     const data = await res.json()
     const status = data.status

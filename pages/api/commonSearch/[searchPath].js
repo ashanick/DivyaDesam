@@ -13,7 +13,7 @@ export default function handler({query: {searchPath}}, res) {
     // console.log('Boom Boom Boom Common Search +++ 💥💥💥💥💥💥💥 V2 Boom : ', searchPath)
     const xx = searchPath.split('+')
     // console.log('XX Splits', xx[0], "ancestry Split: ", xx[1], ' City Split: ', xx[2])
-    msg = 'Query: ' + searchPath
+    msg = 'Query: ' + searchPath + 'Name: ' + xx[0] + 'Ancetry : ' + xx[1]
     var searchStatement = '';
     var testString = xx[0].charAt(0).toLowerCase() + xx[0].slice(1)
     for (let i = 0; i < 5; i++){
