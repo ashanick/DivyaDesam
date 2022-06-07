@@ -9,7 +9,7 @@ var driver = neo4j.driver(
 // console.log('Driver', driver)
 var session = driver.session();
 export default function handler({query: {searchPath}}, res) {
-    // console.log('Boom Boom Boom Common Search +++ 💥💥💥💥💥💥💥 V2 Boom : ', searchPath)
+    console.log('Boom Boom Boom Common Search +++ 💥💥💥💥💥💥💥 V2 Boom : ', searchPath)
     const xx = searchPath.split('+')
     // console.log('XX Splits', xx[0], "ancestry Split: ", xx[1], ' City Split: ', xx[2])
     var searchStatement = '';

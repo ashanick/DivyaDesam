@@ -29,9 +29,9 @@ function SearchAll (){
     const wp = router.asPath.split('?')
     const wpSplit1 = wp[0].split('/')
     const xx =wpSplit1[2].split('+')
-    const yy = xx[1]+'+'+xx[2]+'+'+ xx[3]+'+'+xx[4]+'+'+xx[5]
+    const yy = xx[0]+'+'+xx[1]+'+'+ xx[2]+'+'+xx[3]+'+'+xx[4]
     var members = []
-    // console.log('Search Path Common Search : ', searchPath)
+    console.log('Search Path Common Search : ', yy)
     const {data, error} = useSWR(
         ()=> yy && `/api/commonSearch/${yy}`,
         fetcher
