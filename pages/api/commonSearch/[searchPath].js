@@ -22,9 +22,9 @@ export default function handler({query: {searchPath}}, res) {
       searchStatement = "Optional MATCH (m:Member) WHERE toLower(m.name) contains '" + testString + "'"
     } 
     for (let i = 0; i < 5; i++){
+      msg = msg + i + 'value' + xx[i] + ' replace'
       if (xx[i] === 'None' || xx[i] === 'undefined') {
         xx[i] = ''
-        msg = msg + i + ' replace'
       }
     }
 
@@ -81,7 +81,7 @@ export default function handler({query: {searchPath}}, res) {
     searchStatement = searchStatement + ' Return m'
 
     // console.log('🙌🙌🤳🤳 Where Clause : ', searchStatement)
-    msg = 'SearchStatement : ' + searchStatement + ' '
+    msg = msg + ' : -- SearchStatement : ' + searchStatement + ' '
     var membersList  = []
     session
       .run(`${searchStatement}`)
