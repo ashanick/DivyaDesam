@@ -13,7 +13,7 @@ function GridItem(props) {
         linkPath = `/linksUser2/${name}`
     }
     if (listType === 'user2'){
-        linkPath = `/search-connections/${user1}+${name}`
+        linkPath = `/search-connections/${user1}1000${name}`
     }
 
     return (

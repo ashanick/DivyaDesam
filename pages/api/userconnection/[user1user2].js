@@ -8,7 +8,7 @@ var driver = neo4j.driver(
 var session = driver.session();
 export default function handler({query: {user1user2}}, res) {
     // console.log('St George Connections Search +++ V2 Boom 7777 🙌🙌: ', user1user2)
-    const xx = user1user2.split('+')
+    const xx = user1user2.split('1000')
     // console.log('XX Split', xx[0], xx[1])
     var searchStatement = "Match (p1:Member {name: '"
     searchStatement = searchStatement+ xx[0] + "'}), (p2:Member {name: '"

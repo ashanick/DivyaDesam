@@ -41,22 +41,6 @@ function SearchUser2 (){
         )
     }
 
-    if (error) {
-        return (
-            <div style={{textAlign: 'center', marginTop: '5rem', marginBottom: '5rem'}}>
-                <h1>Something went wrong .... Please try again</h1>
-            </div>
-        )
-    }
-
-    if (!data) {
-        return (
-            <div style={{textAlign: 'center', marginTop: '5rem', marginBottom: '5rem'}}>
-                <h1>Resend with valid request .... Please try again</h1>
-            </div>
-        )
-    }
-
     members = data
     if (data){
         isLoading = false
@@ -73,8 +57,23 @@ function SearchUser2 (){
         )
     }
 
-    // console.log('Kolaveri Data1 ', data)
+    if (error) {
+        return (
+            <div style={{textAlign: 'center', marginTop: '5rem', marginBottom: '5rem'}}>
+                <h1>Something went wrong .... Please try again</h1>
+            </div>
+        )
+    }
 
+    if (!data) {
+        return (
+            <div style={{textAlign: 'center', marginTop: '5rem', marginBottom: '5rem'}}>
+                <h1>Resend with valid request .... Please try again</h1>
+            </div>
+        )
+    }
+
+    // console.log('Kolaveri Data1 ', data)
 
     return (
         <div classame={classes.u1u2__main}>

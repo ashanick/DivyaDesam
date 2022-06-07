@@ -19,7 +19,7 @@ const fetcher = async(url) => {
 function SearchConnections(){
     const router = useRouter()
     const searchPath = router.query.slug
-    // console.log('Search Connections Api : ', searchPath)
+    console.log('Search Connections Api : ', searchPath)
     
     const {data, error} = useSWR(
         ()=> searchPath && `/api/userconnection/${searchPath}`,
