@@ -74,14 +74,16 @@ export default function handler({query: {searchPath}}, res) {
     searchStatement = searchStatement + ' Return m'
 
     // console.log('🙌🙌🤳🤳 Where Clause : ', searchStatement)
-    var msg = ''
+    var msg = 'SearchStatement : ' + searchStatement + ' '
     var membersList  = []
     session
       .run(`${searchStatement}`)
       .then(function(result){
-          msg = msg + 'In success : ' + result.records.length
-
+          if (result.records.length === 0){
+            res.status(201).json({message: "Opps Not Found", msg})
+          } else {
         result.records.forEach(function(record){
+          msg = msg + 'In success : ' + result.records.length
           // console.log('Record : ', record._fields[0])
           msg = msg + "In records length : " + record._fields + ' ' 
         //   console.log('Record ', record._fields[0])
@@ -112,6 +114,7 @@ export default function handler({query: {searchPath}}, res) {
             res.status(200)
                 .json({membersData: membersData, status: 200, msg})
         } 
+      }
       })
       .catch(function(error){
           // console.log('Kolaveri : ', error)
