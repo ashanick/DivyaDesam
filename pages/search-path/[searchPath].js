@@ -29,7 +29,7 @@ function SearchAll (){
     const wp = router.asPath.split('?')
     const wpSplit1 = wp[0].split('/')
     const xx =wpSplit1[2].split('+')
-    const yy = '+n+' + xx[0]+ '+a+'+xx[1]+'+c+'+ xx[2]+'+e+'+xx[3]+'+p+'+xx[4]
+    const yy = xx[0]+ '1000'+xx[1]+'1000'+ xx[2]+'1000'+xx[3]+'1000'+xx[4]
     var members = []
     console.log('Search Path Common Search : ', yy)
     const {data, error} = useSWR(
