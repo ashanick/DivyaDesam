@@ -26,15 +26,18 @@ function SearchAll (){
     const router = useRouter()
     const searchPath = router.query.searchPath
     var isLoading = true
-    
+    const wp = router.asPath.split('?')
+    const wpSplit1 = wp[0].split('/')
+    const xx =wpSplit1[2].split('+')
+    const yy = xx[1]+'+'+xx[2]+'+'+ xx[3]+'+'+xx[4]+'+'+xx[5]
     var members = []
     // console.log('Search Path Common Search : ', searchPath)
     const {data, error} = useSWR(
-        ()=> searchPath && `/api/commonSearch/${searchPath}`,
+        ()=> yy && `/api/commonSearch/${yy}`,
         fetcher
     )
 
-    console.log('Message : ', data)
+    // console.log('Message : ', data)
     if (data) {
         // console.log('Setting Member State')
         members = data
