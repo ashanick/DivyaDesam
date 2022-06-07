@@ -20,11 +20,16 @@ export default function handler({query: {searchPath}}, res) {
     if (xx[0] !== '') {
       searchStatement = "Optional MATCH (m:Member) WHERE toLower(m.name) contains '" + testString + "'"
     } 
+    for (let i = 0; i < 5; i++){
+      if (xx[i] === 'None' || xx[i] === 'undefined') {
+        xx[i] = ''
+      }
+    }
 
     // xx 1 ancestry
-    if (xx[1] !== '' && xx[1] !== 'None') {
+    if (xx[1] !== '') {
       // console.log('Ancestry')
-      if (xx[0] === ''){
+      if (xx[0] === '' ){
         // console.log('Indiv ancestry : ', xx[1])
         searchStatement = "OPTIONAL MATCH pathmem = (m:Member) -[r:BELONGS_TO]-(c:Cities {name: '" + xx[1] + "'}) "
       } else {
@@ -34,7 +39,7 @@ export default function handler({query: {searchPath}}, res) {
     } 
 
     // xx 2 cities
-    if (xx[2] !== '' && xx[2] !== 'None') {
+    if (xx[2] !== '') {
       // console.log('City')
       if (xx[0] === ''){
         // console.log('Indiv city : ', xx[2])
@@ -46,7 +51,7 @@ export default function handler({query: {searchPath}}, res) {
     } 
 
     // xx 3 education
-    if (xx[3] !== '' && xx[3] !== 'None') {
+    if (xx[3] !== '') {
       // console.log('Education : ', xx[3])
       const temped = "OPTIONAL MATCH pathmem = (m:Member) -[r:DETAIL_OWN]-(c:Details {education: '" + xx[3] + "'}) "
       if (searchStatement === ''){
@@ -60,7 +65,7 @@ export default function handler({query: {searchPath}}, res) {
     }
 
     // xx 4 profession
-    if (xx[4] !== '' && xx[4] !== 'None') {
+    if (xx[4] !== '' ) {
       // console.log('Profession : ', xx[4])
       const temped = "OPTIONAL MATCH pathmem = (m:Member) -[r:DETAIL_OWN]-(c:Details {profession: '" + xx[4] + "'}) "
       if (searchStatement === ''){
