@@ -9,24 +9,26 @@ var driver = neo4j.driver(
 // console.log('Driver', driver)
 var session = driver.session();
 export default function handler({query: {searchPath}}, res) {
-    console.log('Boom Boom Boom Common Search +++ 💥💥💥💥💥💥💥 V2 Boom : ', searchPath)
+    var msg
+    // console.log('Boom Boom Boom Common Search +++ 💥💥💥💥💥💥💥 V2 Boom : ', searchPath)
     const xx = searchPath.split('+')
     // console.log('XX Splits', xx[0], "ancestry Split: ", xx[1], ' City Split: ', xx[2])
+    msg = 'Query: ' + searchPath
     var searchStatement = '';
     var testString = xx[0].charAt(0).toLowerCase() + xx[0].slice(1)
-    var msg
+    for (let i = 0; i < 5; i++){
+      // msg = msg + i + 'value' + xx[i] + ' replace'
+      if (xx[i] === 'None' || xx[i] === 'undefined') {
+        xx[i] = ''
+      }
+    }
     // console.log('Converted to Lower Case : ', testString)
      
     // XX[0] part name
     if (xx[0] !== '') {
       searchStatement = "Optional MATCH (m:Member) WHERE toLower(m.name) contains '" + testString + "'"
     } 
-    for (let i = 0; i < 5; i++){
-      msg = msg + i + 'value' + xx[i] + ' replace'
-      if (xx[i] === 'None' || xx[i] === 'undefined') {
-        xx[i] = ''
-      }
-    }
+
 
     // xx 1 ancestry
     if (xx[1] !== '') {
