@@ -14,6 +14,7 @@ export default function handler({query: {searchPath}}, res) {
     // console.log('XX Splits', xx[0], "ancestry Split: ", xx[1], ' City Split: ', xx[2])
     var searchStatement = '';
     var testString = xx[0].charAt(0).toLowerCase() + xx[0].slice(1)
+    var msg
     // console.log('Converted to Lower Case : ', testString)
      
     // XX[0] part name
@@ -23,6 +24,7 @@ export default function handler({query: {searchPath}}, res) {
     for (let i = 0; i < 5; i++){
       if (xx[i] === 'None' || xx[i] === 'undefined') {
         xx[i] = ''
+        msg = msg + i + ' replace'
       }
     }
 
@@ -79,7 +81,7 @@ export default function handler({query: {searchPath}}, res) {
     searchStatement = searchStatement + ' Return m'
 
     // console.log('🙌🙌🤳🤳 Where Clause : ', searchStatement)
-    var msg = 'SearchStatement : ' + searchStatement + ' '
+    msg = 'SearchStatement : ' + searchStatement + ' '
     var membersList  = []
     session
       .run(`${searchStatement}`)
