@@ -11,7 +11,7 @@ function SecondUser(){
         const temp = e
         const tt = user1.user1
         // console.log('In Search 2 : U1 : ', user1, 'tempSearch : ', temp)
-        const searchValue = `${user1}+${e}`
+        const searchValue = `${user1}1000${e}`
         // console.log('Search Value U1', searchValue)
         // console.log('Search Values', searchValue)
         const searchPath = `/search-User2/${searchValue}`

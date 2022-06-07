@@ -18,7 +18,7 @@ const fetcher = async(url) => {
         console.log('In Fetcher Error')
         return error
     }
-    console.log('Returning data and Status', status)
+    // console.log('Returning data and Status', status)
     return data
 }
 
@@ -31,7 +31,7 @@ function SearchAll (){
     const xx =wpSplit1[2].split('+')
     const yy = xx[0]+ '1000'+xx[1]+'1000'+ xx[2]+'1000'+xx[3]+'1000'+xx[4]
     var members = []
-    console.log('Search Path Common Search : ', yy)
+    // console.log('Search Path Common Search : ', yy)
     const {data, error} = useSWR(
         ()=> yy && `/api/commonSearch/${yy}`,
         fetcher
@@ -41,7 +41,7 @@ function SearchAll (){
     if (data) {
         // console.log('Setting Member State')
         members = data
-        console.log('Length of members', data.membersData.members)
+        // console.log('Length of members', data.membersData.members)
         isLoading = false
 
         if (data.membersData.members.length === 0) {
@@ -72,7 +72,7 @@ function SearchAll (){
     // console.log('What is in data', data.membersData)
     var searchText = 'Searched Criteria'
     if(searchPath){
-        const xx = searchPath.split('+')
+        const xx = searchPath.split('1000')
         // console.log('XX ', xx[0], xx[1], xx[2], xx[3], xx[4])
         if (xx[0] ){
             searchText = searchText + ' -- Name contains: ' + xx[0] 

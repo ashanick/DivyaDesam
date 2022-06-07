@@ -20,13 +20,14 @@ function SearchUser2 (){
     const searchPath = router.query.u1u2
     const wp = router.asPath.split('?')
     const wpSplit1 = wp[0].split('/')
-    const xx =wpSplit1[2].split('+')
-    const yy = xx[1]+'+'+xx[2]+'+'+ xx[3]+'+'+xx[4]+'+'+xx[5]
+    console.log('WP from Query :', wp, ' Split : ', wpSplit1)
+    const xx =wpSplit1[2].split('1000')
+    const yy = xx[1]+'1000'+xx[2]+'1000'+ xx[3]+'1000'+xx[4]+'1000'+xx[5]
     var user1
     var isLoading = true
     var members = []
 
-    // console.log('XX value : ', xx)
+    console.log('XX value : ', xx)
     const {data, error} = useSWR(
         ()=> yy && `/api/commonSearch/${yy}`,
         fetcher

@@ -51,7 +51,7 @@ function SearchForm(props) {
         if (citySelected === "None"){
             citySelected = ""
         }
-        const searchPath = `${partName}+${ancestry}+${citySelected}+${education}+${profession}`
+        const searchPath = `${partName}1000${ancestry}1000${citySelected}1000${education}1000${profession}`
         // console.log('Form submitted : ', searchPath)
         props.returnHandler(searchPath)
     }

@@ -55,7 +55,7 @@ function LinksUser1 (){
         )
     }
 
-    // console.log('Kolaveri Data1 ', data)
+    console.log('Kolaveri Data1 ', data)
     members = data
 
     // console.log('Members asearchlpha ', members)
