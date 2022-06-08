@@ -104,7 +104,7 @@ function UserDetailPage () {
                 <UserDetailTopSection 
                     items={data.member.member} 
                     parents={data.member.parents}
-                    children={data.member.children}
+                    kids={data.member.children}
                     />
             </div>
 

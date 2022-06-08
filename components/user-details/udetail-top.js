@@ -9,8 +9,7 @@ function UserDetailTopSection(props) {
     const {dob, name, spouse, imageURL, spouseImageURL, education,
         profession, school, hobby} = props.items[0]
     const parents = props.parents
-    const siblings = props.siblings
-    const children = props.children
+    const kids = props.kids
     console.log('User top : ', props)
     
     const imagePath=`/${imageURL}`
@@ -34,7 +33,7 @@ function UserDetailTopSection(props) {
         parentState = true
     }
 
-    if (children.length > 0){
+    if (kids.length > 0){
         childrenState = true
     }
 
@@ -81,7 +80,7 @@ function UserDetailTopSection(props) {
                             <h3>Children</h3>
                             <div className={classes.detailsMarriage}>
                                 <UserDetailChildren 
-                                    items={children}
+                                    items={kids}
                                 />
                             </div>
                         </div>
