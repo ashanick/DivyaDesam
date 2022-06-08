@@ -1,7 +1,7 @@
 function ContactUs(){
     return (
         <div>
-            Contact Us
+            <p>To contact us, please reach Asha @ asha.sundararajan@gmail.com</p>
         </div>
     )
 }

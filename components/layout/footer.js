@@ -45,7 +45,7 @@ function FooterSection(){
                     <hr style={{border: '1px solid red'}}/>
                     <ul>
                         <li key= "contribute">
-                            <Link href={'/viewclans/Vamsa2'}>
+                            <Link href={'/contactus'}>
                                 <a>
                                     How to contribute
                                 </a>
