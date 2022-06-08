@@ -85,6 +85,7 @@ export default function handler({query: {userName}}, res) {
                         var earlydescription = ""
                         var hobby = ""
                         var spouse = ""
+                        var spouseImageURL = ""
                         var adultdescription = ""
                         var notes = ""
                         var dob = ''
@@ -108,6 +109,7 @@ export default function handler({query: {userName}}, res) {
                         if (record._fields[10]){
                             // console.log('Spouse : ', record._fields[10], 'Spise: ', record._fields[11])
                             spouse = record._fields[11].properties.name
+                            spouseImageURL = record._fields[11].properties.imageURL
                         }
 
                         memberDetail.push({
@@ -120,6 +122,7 @@ export default function handler({query: {userName}}, res) {
                             earlydescription: earlydescription,
                             hobby,
                             spouse,
+                            spouseImageURL,
                             notes,
                             adultdescription,
                             dob
@@ -145,19 +148,22 @@ export default function handler({query: {userName}}, res) {
                             // console.log('Source : ', parentArray[tempIndex])
                             // console.log('Target : ', writeTarget)
                             // console.log("node", writeTarget, record._fields[2].length )
-                            if (record._fields[2].length < 3) {
-                                userNodes.push({
-                                    id: writeTarget,
-                                    name: writeTarget,
-                                    // __typename: record._fields[2].labels
-                                    __typename: nodeType
-                                })
-                                userLinks.push({
-                                    source: parentArray[tempIndex],
-                                    target: writeTarget
-                                })
-                            }
 
+                            // ***************** This was removed cos I took out the Graph from Individual
+                            // if (record._fields[2].length < 3) {
+                            //     userNodes.push({
+                            //         id: writeTarget,
+                            //         name: writeTarget,
+                            //         // __typename: record._fields[2].labels
+                            //         __typename: nodeType
+                            //     })
+                            //     userLinks.push({
+                            //         source: parentArray[tempIndex],
+                            //         target: writeTarget
+                            //     })
+                            // }
+
+                            //***************************** */
                             prevLength = 0
                             parentArray[record._fields[2].length] = writeTarget
                         }
@@ -180,7 +186,8 @@ export default function handler({query: {userName}}, res) {
                             if (record._fields[2].length === 1) {
                                 if (record._fields[3][0] === "incoming"){
                                     children.push ({
-                                        name: record._fields[2].end.properties.name
+                                        name: record._fields[2].end.properties.name,
+                                        imageURL: record._fields[2].end.properties.imageURL 
                                     })
                                     nodeType="children"
                                 } 

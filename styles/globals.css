@@ -34,7 +34,7 @@ h2{
   margin-bottom: 0;
 }
 
-h3{
+h3, h4{
   color:red;
   font-family: 'Josefin Sans', sans-serif;
 }

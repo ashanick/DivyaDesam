@@ -1,0 +1,96 @@
+.top{
+    justify-content: center;
+    /* background-color: aquamarine;   */
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    grid-gap: 1rem; 
+}
+
+.topleft{
+    border: 1px solid red;
+    width: 25rem;
+    padding: 1rem;
+}
+
+.topmid{
+    display: flex;
+    justify-content: center;
+    grid-gap: 1rem;
+    flex-wrap: wrap;
+    min-width: 28rem;
+}
+
+.topmid__image{
+    width: 20rem;
+    height: 20rem;
+    max-width: 28rem;
+    overflow:hidden;
+    padding: 5px;
+    border-radius: 15%;
+    background-color: goldenrod;
+}
+
+.imageborder{
+    width: auto;
+    border:  red solid 3px;
+    border-radius: 15%;
+    justify-content: center;
+    /* background-color: red; */
+    /* border-radius: 300px/500px; */
+}
+
+.detailsDate{
+    display: flex;
+    grid-gap: 5px;
+    margin-top: -1rem;
+    align-items: baseline;
+}
+
+.detailsMarriage{
+    display: flex;
+    grid-gap: 5px;
+    margin-top: -.5rem;
+    justify-content: center;
+}
+
+.topmid__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:top;
+    border: 2px solid black;
+    border-radius: 15%;
+}
+
+.topright{
+    width: 25rem;
+    height: auto;
+    border: 1px solid red;
+    padding: 1rem;
+    /* background-color: cyan; */
+}
+
+.bottommid{
+    padding: 1rem;
+    min-width: 42rem;
+    width: auto;
+    max-width: 68rem;
+    border: 1px solid red;
+}
+
+.children{
+    margin-top: 0;
+}
+
+.children ul{
+    margin-top: -10px;;
+}
+
+@media (max-width: 768px) {
+    .bottommid{
+        min-width: 25rem;
+        width: 28rem;
+        max-width: 28rem;
+    }
+}

@@ -21,22 +21,18 @@
   .indivuser__main {
     margin: 1rem;
     display:flex;
-    justify-content: center;
     flex-wrap: wrap;
     grid-gap: 1rem;
   }
   
   .user__main {
-    margin: 1rem;
+    /* margin: 1rem; */
     display:flex;
-    justify-content: center;
     flex-wrap: wrap;
     grid-gap: 1rem;
   }
   
-  .user__mem_photo{
-    text-align: center;
-  }
+  
   
   .user {
     /* border: 1px solid green; */

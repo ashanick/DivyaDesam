@@ -16,7 +16,7 @@ function MemoriesItem(props) {
                     alt={title}
                     width={150}
                     height={150}
-                    Layout='responsive'
+                    layout='responsive'
                 />
             </div>
             <div className={classes.content}>

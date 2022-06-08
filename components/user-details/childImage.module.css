@@ -1,0 +1,41 @@
+.ci__main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-gap: 0.5rem;
+}
+
+.ci__image{
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative
+}
+
+.ci__image img{
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+    object-position:top;
+    border-radius: 50%;
+}
+
+.image__info{
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    box-sizing: border-box;
+    font-size:x-small;
+    padding: 10px 10px;
+}
+
+.image__info:hover,
+.ci__image {
+    opacity: 1;
+    /* bottom: -5px; */
+}

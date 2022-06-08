@@ -7,7 +7,7 @@ function LinkList(props){
     return (
         <li className={classes.grid}>
             <Link href={linkPath}>
-                <a>
+                <a style={{fontSize: '20px'}}>
                     {props.name}
                 </a>
             </Link>
