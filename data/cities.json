@@ -20,6 +20,7 @@
         {"id": "c18", "name": "Mumbai", "country": "India", "aVillage": "false"},
         {"id": "c19", "name": "Vaduvoor", "country": "India", "aVillage": "true", "imageURL": "images/Mannargudi.jpg"},
         {"id": "c20", "name": "Vayuthur", "country": "India", "aVillage": "true", "imageURL": "images/Mannargudi.jpg"},
-        {"id": "c21", "name": "Vippodu", "country": "India", "aVillage": "true", "imageURL": "images/Mannargudi.jpg"}
+        {"id": "c21", "name": "Vippodu", "country": "India", "aVillage": "true", "imageURL": "images/Mannargudi.jpg"},
+        {"id": "c22", "name": "Washington", "country": "USA", "aVillage": "false", "imageURL": "images/Mannargudi.jpg"}
     ]
 }
