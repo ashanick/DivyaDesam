@@ -1,5 +1,5 @@
 .image {
-    width: 101%;
+    width: 100%;
     height: auto;
     max-height: 20rem;
     overflow: hidden;
@@ -17,6 +17,8 @@
     margin:  0;
     position: relative;
     text-align: center;
+    align-self: center;
+    width: 100%;
 }
 
 .welcometext{
@@ -42,15 +44,16 @@
     }
 
     .welcometext{
-        margin-top: -2rem;
+        margin-top: 2rem;
+        width: 24rem;
     }
 
-    /* .welcometext h1{
+    .welcometext h1{
         font-size: larger;
     }
 
     .welcometext h3{
         font-size: medium;
-    } */
+    }
 
 }

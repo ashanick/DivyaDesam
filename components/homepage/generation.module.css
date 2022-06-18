@@ -22,6 +22,10 @@
     align-items: center;
 }
 
+.gen__example a {
+    font-size: large;
+}
+
 .image {
     width: 40rem;
     height: 20rem;

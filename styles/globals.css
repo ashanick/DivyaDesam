@@ -4,6 +4,7 @@ html,
 body {
   font-family: Oswald, Cardo;
   color: var(--black);
+  width: 100vw;
   background-color: var(--off-white);
   /* color: var(--off-white);
   background-color: var(--dark); */
@@ -46,15 +47,18 @@ p{
 
 @media (max-width: 768px) {
    a{
-   font-size: var(--font-size-mdlg); 
+   font-size: var(--font-size-md); 
+   /* color:aqua */
   }
+
 
   p{
     font-size: larger; 
    }
 
-   h1{
+   h1, h2{
     font-size: var(--font-size-lg); 
    }
+
 
 }

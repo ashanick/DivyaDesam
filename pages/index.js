@@ -1,8 +1,6 @@
 import Head from 'next/head'
-
-import WelcomeBanner from '../components/homepage/welcome'
-import NewSearch from '../components/users/new-search'
-import HomePageComponent from '../components/homepage'
+import HomePopUp from '../components/homepage/main-popup'
+import HomePageMain from './homepage'
 
 export default function Home() {
   return (
@@ -13,11 +11,7 @@ export default function Home() {
       </Head>
 
       <div>
-        <WelcomeBanner />
-        <NewSearch type = "common"/>
-        {/* <div className="lockup" style={{textAlign: 'center'}}> */}
-            <HomePageComponent />
-        {/* </div>      */}
+          <HomePageMain />
       </div>
     </div>
   )

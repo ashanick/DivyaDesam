@@ -7,7 +7,7 @@ function Layout(props) {
         <div>
             <MainHeader />
             <main >{props.children}</main>
-            <hr style={{border: '1px solid red'}}/>
+            <hr style={{border: '1px solid red', width: '99vw'}}/>
             <FooterSection />
         </div>
     )

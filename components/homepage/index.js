@@ -3,7 +3,7 @@ import {useState, useCallback, useEffect} from 'react'
 import ConnectionsHome from './connections';
 import GenerationRight from './generation-right'
 import GenerationLeft from './generation-left'
-import HomeIntro from './homeintro';
+// import HomeIntro from './homeintro';
 import VillagesGrid from '../villages/villages-grid';
 
 import classes from './homepage.module.css'
@@ -13,7 +13,7 @@ function testIsDesktop() {
     if (typeof window === 'undefined') {
         return true;
     }
-    return window.innerWidth >= 768;
+    return window.innerWidth >= 825;
 }
 
 function useIsDesktopSize(){
@@ -29,14 +29,14 @@ function useIsDesktopSize(){
         window.addEventListener('resize', autoResize);
         autoResize();
         return () => window.removeEventListener('resize', autoResize);
-    }, [])
+    }, [windowInnerWidth])
 
     useEffect(()=>{
         let autoResize1 = () => {
             // console.log("Is ? Desktop: " + isDesktopSize);
             // console.log('Window Inner Width', window.innerWidth);
             setWindowInnerWidth(window.innerWidth)
-            if(window.innerWidth < 768 ){
+            if(window.innerWidth < 826 ){
                 // console.log('Am i in less than')
                 setIsDesktopSize(false)
             }else{
@@ -75,14 +75,7 @@ function HomePageComponent(){
     return (
     <div >
         <div className={classes.main__av}>
-            {/* <div>State {isDesktopSize} What is {whatishappening}</div> */}
-            <HomeIntro />
-            <hr style={{border: '1px solid red'}}/>
-            <div className={classes.introtext}>
-                <h2>1000+ Iyengars started with the premise that there are no more than 
-                5 degrees of seperation between any 2 Iyengars, and we can search connections in the extended network.
-                </h2>
-            </div>
+
             <hr style={{border: '1px solid red'}}/>
             {
                 isDesktopSize &&

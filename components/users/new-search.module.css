@@ -1,16 +1,20 @@
 .form {
-    /* background-color: grey; */
-    /* display:flex; */
-    width: auto;
-    /* margin: 1rem 6rem; */
-    padding:0
+    width: 100vw;
+    padding:0;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin: 0;
 }
 
 .wrap__search{
   display: flex;
   grid-gap: 1rem;
   justify-content: center;
-  width:auto;
+  width:100vw;
+  align-self: center;
+  flex-wrap: wrap;
   /* height: 7rem; */
 }
 
@@ -19,14 +23,15 @@
   width: auto;
   justify-content: center;
 }
-  .control {
-    margin: 0 ;
-    padding: 0 1rem;
-    flex: 1;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    text-align: center;
+
+.control {
+  margin: 0 ;
+  padding: 0 1rem;
+  flex: 1;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .labelinput {
@@ -64,7 +69,6 @@
   border: 1px solid red;
   text-align: center;
   margin: 0.5rem 0;
-  width: auto;
 }
 
 .main__querytext{
@@ -87,43 +91,23 @@
 }
 
 @media (min-width: 768px) {
-  .formreset h2 {
+  /* .formreset h2 {
     margin: 0 2rem;
-  }
+  } */
 }
 
 @media (max-width: 768px) {
-  .form {
-    display: block;
-    flex-direction: column;
-    margin: 1rem 5rem;
-  }
 
-  .labelinput{
-    margin-top: 2px;
-    margin-right: 2px;
-  }
 
   .topcontent {
-    margin: 1rem 1.5rem;
+    margin: 1rem 0;
     text-align: 'center'
   }
 
-  .formsubmitbutton{
-    align-content: center;
-    align-self: center;
-  }
-
   .formreset{
-    margin: 1rem;
+    /* margin: 1rem; */
     width: auto;
     gap: 0.5rem;
-  }
-  
-  .control {
-    align-items: center;
-    max-width: 25rem;
-    width: auto;
   }
 
   .main__query__club{
@@ -132,7 +116,9 @@
 
   .wrap__search{
     display: block;
-    max-width: 20rem;
-    width: 20rem;
+    max-width: 95vw;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
   }
 }

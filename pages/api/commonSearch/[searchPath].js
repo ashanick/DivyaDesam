@@ -10,7 +10,7 @@ var driver = neo4j.driver(
 var session = driver.session();
 export default function handler({query: {searchPath}}, res) {
     var msg
-    // console.log('Boom Boom Boom Common Search +++ 💥💥💥💥💥💥💥 V2 Boom : ', searchPath)
+    console.log('Boom Boom Boom Common Search +++ 💥💥💥💥💥💥💥 V2 Boom : ', searchPath)
     const xx = searchPath.split('1000')
     // console.log('XX Splits', xx[0], "ancestry Split: ", xx[1], ' City Split: ', xx[2])
     msg = 'Query: ' + searchPath + ' -- Name:' + xx[0] + 'Ancestry :' + xx[1]
@@ -63,7 +63,7 @@ export default function handler({query: {searchPath}}, res) {
         searchStatement = temped
       } else {
         // console.log('Ed else clause :', searchStatement)
-        searchStatement = searchStatement + "AND exists((m)-[:DETAIL_OWN]-(:Details {education: '" + xx[3] + "'}))" 
+        searchStatement = searchStatement + "AND exists((m)-[:DETAIL_OWN]-(c:Details {education: '" + xx[3] + "'}))" 
       }
       // console.log('Education Search : ', searchStatement)
     }
@@ -75,14 +75,14 @@ export default function handler({query: {searchPath}}, res) {
       if (searchStatement === ''){
         searchStatement = temped
       } else {
-        searchStatement = searchStatement + "AND exists((m)-[:DETAIL_OWN]-(:Details {profession: '" + xx[4] + "'}))" 
+        searchStatement = searchStatement + "AND exists((m)-[:DETAIL_OWN]-(c:Details {profession: '" + xx[4] + "'}))" 
       }
       // console.log('Education Search : ', searchStatement)
     }
 
     searchStatement = searchStatement + ' Return m'
 
-    // console.log('🙌🙌🤳🤳 Where Clause : ', searchStatement)
+    console.log('🙌🙌🤳🤳 Where Clause : ', searchStatement)
     msg = msg + ' : -- SearchStatement : ' + searchStatement + ' '
     var membersList  = []
     session

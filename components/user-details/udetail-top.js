@@ -128,7 +128,7 @@ function UserDetailTopSection(props) {
                     <p>{education}</p>
                 </div>
                 <div className={classes.detailsDate}>
-                    <h3>Profession</h3>
+                    <h3>Profession :</h3>
                     <p>{profession}</p>
                 </div>
                 <div className={classes.detailsDate}>
