@@ -47,23 +47,23 @@ export default function handler({query: {searchPath}}, res) {
       // console.log('City')
       if (xx[0] === ''){
         // console.log('Indiv city : ', xx[2])
-        searchStatement = "OPTIONAL MATCH pathmem = (m:Member) -[r:LIVED_IN]-(c:Cities {name: '" + xx[2] + "'}) "
+        searchStatement = "OPTIONAL MATCH (m:Member) -[r:LIVED_IN]-(c:Cities) WHERE c.name = '" + xx[2] + "'"
       } else {
         // console.log('Combined name city', xx[2])
-        searchStatement = "OPTIONAL MATCH pathmem = (m:Member) -[r:LIVED_IN]-(c:Cities {name: '" + xx[2] + "'})  WHERE toLower(m.name) contains '" + testString +"'"
+        searchStatement = "OPTIONAL MATCH (m:Member) -[r:LIVED_IN]-(c:Cities {name: '" + xx[2] + "'})  WHERE toLower(m.name) contains '" + testString +"'"
       }
     } 
 
     // xx 3 education
     if (xx[3] !== '') {
       // console.log('Education : ', xx[3])
-      const temped = "OPTIONAL MATCH pathmem = (m:Member) -[r:DETAIL_OWN]-(c:Details {education: '" + xx[3] + "'}) "
+      const temped = "OPTIONAL MATCH (m:Member) -[r:DETAIL_OWN]-(d:Details) WHERE d.education = '" + xx[3] + "'"
       if (searchStatement === ''){
         // console.log('Ed 1st clause')
         searchStatement = temped
       } else {
         // console.log('Ed else clause :', searchStatement)
-        searchStatement = searchStatement + "AND exists((m)-[:DETAIL_OWN]-(c:Details {education: '" + xx[3] + "'}))" 
+        searchStatement = searchStatement + "AND exists { MATCH (m)-[:DETAIL_OWN]-(d:Details) WHERE d.education CONTAINS '" + xx[3] + "'}" 
       }
       // console.log('Education Search : ', searchStatement)
     }
@@ -71,11 +71,11 @@ export default function handler({query: {searchPath}}, res) {
     // xx 4 profession
     if (xx[4] !== '' ) {
       // console.log('Profession : ', xx[4])
-      const temped = "OPTIONAL MATCH pathmem = (m:Member) -[r:DETAIL_OWN]-(c:Details {profession: '" + xx[4] + "'}) "
+      const temped = "OPTIONAL MATCH pathmem = (m:Member) -[r:DETAIL_OWN]-(d:Details {profession: '" + xx[4] + "'}) "
       if (searchStatement === ''){
         searchStatement = temped
       } else {
-        searchStatement = searchStatement + "AND exists((m)-[:DETAIL_OWN]-(c:Details {profession: '" + xx[4] + "'}))" 
+        searchStatement = searchStatement + " AND EXISTS { MATCH (m)-[:DETAIL_OWN]-(d:Details) WHERE d.profession = '" + xx[4] + "'}" 
       }
       // console.log('Education Search : ', searchStatement)
     }

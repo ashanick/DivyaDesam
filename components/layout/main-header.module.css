@@ -66,15 +66,15 @@
       list-style: none;
     } */
   
-  /* .navigation{
-    margin-right: 1rem;
-  } */
+  .navigation{
+    margin-left: -0.8rem;
+  }
   
-    /* .headermenu{
+    .headermenu{
       margin: 0
     }
 
     .image{
         margin-left: 10px;;
-    } */
+    }
 }

@@ -3,7 +3,7 @@ import {useState, useCallback, useEffect} from 'react'
 import ConnectionsHome from './connections';
 import GenerationRight from './generation-right'
 import GenerationLeft from './generation-left'
-// import HomeIntro from './homeintro';
+import HomeIntro from './homeintro';
 import VillagesGrid from '../villages/villages-grid';
 
 import classes from './homepage.module.css'
@@ -74,6 +74,9 @@ function HomePageComponent(){
     // console.log('What is happening ? : ', whatishappening)
     return (
     <div >
+        <div className={classes.intro}>
+            <HomeIntro />
+        </div>
         <div className={classes.main__av}>
 
             <hr style={{border: '1px solid red'}}/>

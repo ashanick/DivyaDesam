@@ -1,0 +1,10 @@
+.enter__main{
+    justify-content: center;
+    /* background-color: bisque; */
+    text-align: center;
+    width: 98vw;
+}
+
+.enter__ul {
+    list-style: none;
+}

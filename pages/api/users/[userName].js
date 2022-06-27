@@ -8,8 +8,9 @@ var driver = neo4j.driver(
 var session = driver.session();
 
 export default function handler({query: {userName}}, res) {
-    // console.log(' 🤳🤳🤳User Name Api 6666 =====: ', userName)
-
+    console.log(' 🤳🤳🤳User Name Api 6666 =====: ', userName)
+   
+    var familyTreeList = []
     var userNodes = []
     var userLinks = []
     var memberDetail = []
@@ -34,6 +35,7 @@ export default function handler({query: {userName}}, res) {
     var people = false
     var nodeType = "user"
     
+    // 0(m)-Member, 1(n)-Member parent of, 2-(path) parent of, 3-directions, 4-
     session
     .run(`OPTIONAL MATCH pathmem = (b:Member {name: '${userName}'}) - [r:MEMORY_OWN] ->(o:Memories) 
         OPTIONAL MATCH pathphoto = (a:Member {name: '${userName}'}) - [w:PHOTO_OWN] ->(q:PhotoGallery)
@@ -50,7 +52,7 @@ export default function handler({query: {userName}}, res) {
                 res.status(201).json({message: "Opps Not Found"})
             } else {
                 result.records.forEach(function(record){
-                    // console.log('Memory field 1 & 4: ', record._fields[1])
+                    // console.log('Step 1- Memory field 1 & 4: ')
                    
                     if (record._fields[4]) {
                         if (record._fields[4] !== null && record._fields[5].type ===  "MEMORY_OWN") {
@@ -75,7 +77,7 @@ export default function handler({query: {userName}}, res) {
                             })
                         }
                     }
-
+                    // console.log('Entering 1st node')
                     if ( firstNode){
                         firstNode = false
                         prevLength = 0
@@ -99,18 +101,15 @@ export default function handler({query: {userName}}, res) {
                             notes = record._fields[9].properties.notes
                             adultdescription = record._fields[9].properties.adultdescription
                             if (record._fields[9].properties.dob){
-                                // console.log('DOB Date Field: ', record._fields[9].properties.dob )
                                 dob = record._fields[9].properties.dob
-                            }
-                            // console.log('String Date : ', dob)
-                            // console.log ('Profession : ', prof) 
+                            } 
                         }
 
                         if (record._fields[10]){
-                            // console.log('Spouse : ', record._fields[10], 'Spise: ', record._fields[11])
                             spouse = record._fields[11].properties.name
                             spouseImageURL = record._fields[11].properties.imageURL
                         }
+                        // console.log('Finished spouse')
 
                         memberDetail.push({
                             id: record._fields[1].properties.name,
@@ -134,8 +133,16 @@ export default function handler({query: {userName}}, res) {
                             __typename: nodeType
                         })
                         parentArray[0] = record._fields[1].properties.name
+                        // console.log('Pushed User Nodes')
+                        familyTreeList.push({
+                            name: record._fields[1].properties.name,
+                            parentId: null,
+                            type: "Parent",
+                            id: record._fields[1].properties.name,
+                        })
                     }
 
+                    // console.log('Family tree : ', familyTree)
                     if (record._fields[2]){
                         tempIndex = record._fields[2].length -1
 
@@ -145,6 +152,7 @@ export default function handler({query: {userName}}, res) {
                         }
 
                         if (prevLength === record._fields[2].length) {
+                            // console.log('Coming to write')
                             // console.log('Source : ', parentArray[tempIndex])
                             // console.log('Target : ', writeTarget)
                             // console.log("node", writeTarget, record._fields[2].length )
@@ -185,11 +193,20 @@ export default function handler({query: {userName}}, res) {
                             
                             if (record._fields[2].length === 1) {
                                 if (record._fields[3][0] === "incoming"){
+                                    // console.log('Children Record Fields 2', record._fields[2].start.properties.name, record._fields[2].end.properties.name )
                                     children.push ({
                                         name: record._fields[2].end.properties.name,
                                         imageURL: record._fields[2].end.properties.imageURL 
                                     })
                                     nodeType="children"
+
+                                    // For Family Tree Added June 20
+                                    familyTreeList.push({
+                                        name: record._fields[2].end.properties.name,
+                                        parentId: record._fields[2].start.properties.name,
+                                        type: "Child",
+                                        id: record._fields[2].end.properties.name,
+                                    })
                                 } 
                                 if (record._fields[3][0] === "outgoing" ){
                                     // console.log('Parents : ', record._fields[2].end)
@@ -208,6 +225,13 @@ export default function handler({query: {userName}}, res) {
                                         imageURL: record._fields[2].end.properties.imageURL 
                                     })
                                     nodeType="grandChildren"
+                                    familyTreeList.push({
+                                        name: record._fields[2].end.properties.name,
+                                        parentId: parentArray[tempIndex],
+                                        type: "GrandChild",
+                                        id: record._fields[2].end.properties.name,
+                                    })
+                                    // console.log('Grand Children ', record._fields[2].start.properties.name, record._fields[2].end.properties.name )
                                 }   
                                 if (record._fields[3][0] === "outgoing"){
                                     grandParent.push({
@@ -297,9 +321,12 @@ export default function handler({query: {userName}}, res) {
                 greatGreatGreatGrandParent: _.uniqBy(greatGreatGreatGrandParent, "name"), greatGreatGreatGrandChildren: _.uniqBy(greatGreatGreatGrandChildren, "name"),
                 siblings: _.uniqBy(siblings, "name")
             }
-
+            console.log('Before Family Tree')
+            // const familyTree = {familyTree: _uniqBy(familyTreeList, "id")}
+            // const familyTree = {familyTree: _.uniqBy(familyTreeList, "name")}
             const memories = {memories: _.uniqBy(memoriesList, "title")}
             const photoGallery = {photoList: _.uniqBy(photoList, "title")}
+            // console.log('Family Tree', familyTreeList)
             // console.log('Children ', children, grandChildren, 'GrandChildren : ')
             // console.log('Parent : ', parents, 'Grandparent ', grandParent)
             // console.log('Siblings ', siblings)
@@ -308,7 +335,7 @@ export default function handler({query: {userName}}, res) {
             if (firstNode) {
                 res.status(201).json({message: "Opps Not Found"})
             } else {
-                res.json({data: data, member: member, memories: memories, photoGallery: photoGallery})
+                res.json({data: data, member: member, memories: memories, photoGallery: photoGallery, familyTree: familyTreeList})
             }
         }) .catch(function(error){
             // console.log("Hey airaaa", error);

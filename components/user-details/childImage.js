@@ -8,11 +8,12 @@ function ChildImage(props){
     var linkPath = `/users/${name}`
     // console.log('Child Image Props : ', imagePath)
     return (
-        <div className={classes.ci__image}>
+        <div id={name} className={classes.ci__image}>
             <Link href={linkPath}>
                 <a>
                     <div style={{width: '100%'}}>
                     <Image
+                        id={name}
                         src={imagePath}
                         alt={name}
                         width={5}

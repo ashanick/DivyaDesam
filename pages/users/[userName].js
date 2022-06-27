@@ -13,6 +13,8 @@ import NewSearch from '../../components/users/new-search';
 import UserDetailTopSection from '../../components/user-details/udetail-top';
 // import UserDetailChildren from '../../components/user-details/udetail-children';
 import UserDescription from '../../components/user-details/user-description';
+import TreeArray from '../../components/familytree/treearray';
+import { flatten } from 'lodash';
 
 const fetcher = async(url) => {
     // console.log('In fetcher')
@@ -33,6 +35,7 @@ function UserDetailPage () {
     var photoState = false
     var isLoading = true
     var childrenState = false
+    var familyTree = false
     
     // console.log('Query router Aiyaa', router.query)
     // console.log('User Detail, Part 1', userName)
@@ -91,6 +94,12 @@ function UserDetailPage () {
     if (data.member.member[0].spouse) {
         mname = mname + ' &  ' + data.member.member[0].spouse 
     }
+
+    if (data.familyTree.length > 1) {
+        familyTree = true
+    }
+
+    
     return (
         <div>
             <Head>
@@ -107,17 +116,21 @@ function UserDetailPage () {
                     kids={data.member.children}
                     />
             </div>
-
-
-            
+            {/* <div style={{display: 'flex', width: '90vw',  justifyContent: 'center', border: '1px solid red'}}>
+                    {
+                        familyTree &&
+                        <TreeArray items={data.familyTree} />
+                    }
+                </div> */}
             <div className={classes.user__main}>
+
                 <UserDescription 
                     items={data.member}
                     memories={data.memories}
                     photoGallery={data.photoGallery}
                     />
             </div>
- 
+            
         </div>
     )
 

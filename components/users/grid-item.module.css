@@ -33,11 +33,11 @@
 
   @media (max-width: 768px) {
     .grid {
-      min-width: 13rem;
-      max-width: 13rem;
+      min-width: 11rem;
+      max-width: 11rem;
     }
     .image{
-      width: 13rem;
-      max-width: 13rem;
+      width: 11rem;
+      max-width: 11rem;
     }
   }

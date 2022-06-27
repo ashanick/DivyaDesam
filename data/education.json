@@ -13,6 +13,8 @@
         {"id": "e9", "name": "Marketing"},
         {"id": "e10", "name": "Masters"},
         {"id": "e10", "name": "Technical Diploma"},
-        {"id": "e13", "name": "Undergrad"}
+        {"id": "e13", "name": "Undergrad"},
+        {"id": "e14", "name": "Bachelors Commerce"},
+        {"id": "e12", "name": "Chartered Accountant CPA"}
     ]
 }

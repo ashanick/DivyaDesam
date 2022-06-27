@@ -1,6 +1,8 @@
 import Head from 'next/head'
-import HomePopUp from '../components/homepage/main-popup'
-import HomePageMain from './homepage'
+import TreeArray from '../components/familytree/treearray'
+// import HomePopUp from '../components/homepage/main-popup'
+import EnterForm from '../components/layout/enterform'
+// import HomePageMain from './homepage'
 
 export default function Home() {
   return (
@@ -11,7 +13,9 @@ export default function Home() {
       </Head>
 
       <div>
-          <HomePageMain />
+        
+          <EnterForm />
+        
       </div>
     </div>
   )

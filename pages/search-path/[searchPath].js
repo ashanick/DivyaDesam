@@ -47,7 +47,7 @@ function SearchAll (){
         if (data.membersData.members.length === 0) {
             return (
                 <div style={{margin: '5rem', textAlign: 'center'}}>
-                   <h2> 💥💥💥💥💥💥 Oops Send valid Request 💥💥💥</h2>
+                   <h2> 💥💥💥💥💥💥 Oops Cannot Find Members for Criteria 💥💥💥</h2>
                 </div>
             )
         }

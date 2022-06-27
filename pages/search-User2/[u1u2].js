@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import useSWR from 'swr'
+import NewSearch from '../../components/users/new-search';
 import UsersGrid from '../../components/users/users-grid'
 import classes from '../../styles/indivuser.module.css'
 
@@ -36,6 +37,7 @@ function SearchUser2 (){
     if (searchPath === null) {
         return (
             <div style={{textAlign: 'center', marginTop: '5rem', marginBottom: '5rem'}}>
+                <NewSearch />
                 <h2>Please send request with correct credentials</h2>
             </div>
         )
@@ -60,6 +62,7 @@ function SearchUser2 (){
     if (error) {
         return (
             <div style={{textAlign: 'center', marginTop: '5rem', marginBottom: '5rem'}}>
+                <NewSearch />
                 <h1>Something went wrong .... Please try again</h1>
             </div>
         )
@@ -68,6 +71,7 @@ function SearchUser2 (){
     if (!data) {
         return (
             <div style={{textAlign: 'center', marginTop: '5rem', marginBottom: '5rem'}}>
+                <NewSearch />
                 <h1>Resend with valid request .... Please try again</h1>
             </div>
         )
