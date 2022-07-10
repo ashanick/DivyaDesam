@@ -20,12 +20,12 @@
 
 @media (max-width: 768px) {
     .post{
-        /* width: 29rem; */
+        width: 25rem;
         margin: 0;
         display: block;
     }
 
-    /* .image {
-        width: 30rem;
-    } */
+    .image {
+        width: 25rem;
+    }
 }

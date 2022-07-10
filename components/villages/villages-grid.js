@@ -18,6 +18,7 @@ function VillagesGrid(props){
                     key={av.id}
                     name={av.name}
                     imageURL={av.imageURL}
+                    items={av}
                 />
             )}
         </ul>

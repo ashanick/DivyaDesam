@@ -4,7 +4,7 @@ import PhotoGrid from '../memories/photo-grid';
 
 function VillageBlog(props){
     const {name, description, imageURL, author, blogDate,
-        title, photoList} = props.items
+        title, description1, description2} = props.items
     // console.log('Village Blog : ', props.items)
     var photoState = false;
     if (props.items.photoList.length > 0){
@@ -15,13 +15,13 @@ function VillageBlog(props){
         <div className={classes.blogmain}>
             <div className={classes.blogtop}>
                 <div className={classes.blogmain__left}>
-                    <h3>{name}</h3> 
+                    <h2>{name}</h2> 
                     <div className={classes.image}>
                         <Image  
                             src={'/' + imageURL}
                             alt={name}
-                            width={300}
-                            height={300}
+                            width={250}
+                            height={250}
                             layout='responsive'
                             />
                     </div>
@@ -29,7 +29,9 @@ function VillageBlog(props){
                 <div className={classes.blogmain__right}>
                     <h3>{title}</h3>
                     <p>Author: {author},     Dated: {blogDate}</p>
-                    {description}
+                    <p>{description}</p>
+                    <p>{description1}</p>
+                    <p>{description2}</p>
                 </div>
             </div>
            

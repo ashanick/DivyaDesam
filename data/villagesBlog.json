@@ -3,6 +3,8 @@
         {"id": "b1", "name": "Kodavasal", "title": "Asha's visit", 
             "author": "Asha Sundararajan", "imageURL": "images/RathaBandham.jpg",
             "description": "1000 amazingly individual crafted and carved stone columns greet you as you walk into the Rajagopal temple. From the elephant to Komalavalli thayar to Haridra Nadhi this journey is accentuated by the ratham in the main hall.",
+            "description1": "I am yet to visit the Srinivasan perumal temple here",
+            "description2": "Part 2",
             "blogDate": "May 2022",
             "photoList": [
                 {"pid": "pid11", "imageURL": "images/RathaBandham.jpg", "title": "Ahs1"},
@@ -11,12 +13,38 @@
         },
         {"id": "b2", "name": "Kumbakonam", "title": "Asha's visit", 
             "author": "Asha Sundararajan", "imageURL": "images/RathaBandham.jpg",
-            "description": "1000 amazingly individual crafted and carved stone columns greet you as you walk into the Rajagopal temple. From the elephant to Komalavalli thayar to Haridra Nadhi this journey is accentuated by the ratham in the main hall.",
+            "description": "Ram, Suja and I visited the Sarangapani, Opaliappan, and Adi Varaha temples on Feb 16, 2002, which was Masi Magham.  ",
+            "description1": "Adi Varaha perumal temple has 10 days of celebration for the Utsavar",
+            "description2": "Part 2",
             "blogDate": "May 2022",
             "photoList": [
-                {"pid": "pid21", "imageURL": "images/RathaBandham.jpg", "title": "Ahs1"},
-                {"pid": "pid22", "imageURL": "images/RathaBandham.jpg", "title": "Ahs2"}
+                {"pid": "pid21", "imageURL": "images/RathaBandham.jpg", "title": "Ratha Bandham @ Sarangapani Temple"},
+                {"pid": "pid22", "imageURL": "images/picture-gallery/AdiVaraha.jpg", "title": "Orvalam @ Adi Varaha temple"}
              ]
+        },
+        {"id": "b3", "name": "Mannargudi", "title": "Feb 17, 2022, Asha's visit", 
+            "author": "Asha Sundararajan", "imageURL": "images/picture-gallery/MannargudiHaridraNadi.jpg",
+            "description": "Mannargudi, the name rang so many bells for people, that this day was filled with calls from so many family members taking a walk through their memories. Both my grandmother hail from Mannargudi, not to mention the that every single person I meet says, yes, I know someone from Mannargudi. It is a beautiful small town, with a lovely central water tank, surrounded by lush fields. At my maternal great grandmother's home, there is a small room with a window that faces Haridra Nadi. All her daughters gave birth in this room, which I believe reminded them of Shimla. In addition, patti locked all her jewels and valuables in a matka in this room.",
+            "description1": "I met with 95-year old Srinivasan mama, who was my grand-aunt's playmate. He was still sharp as a tack, and excited to take us through his 280-year old home and through a small stairwell which led to a terrace. From here we could see the backyard and the many trees that almost seem to have been there forever.",
+            "description2": "The temple of Komalavalli thayar and Rajagopalaswamy, is impressively huge work of art, with a amazingly large theru. 1000 amazingly individual crafted and carved  stone columns greet you as you walk into the Rajagopal temple.  From the elephant to Komalavalli thayar to Haridra Nadhi this journey is accentuated by the ratham in the main hall.",
+            "blogDate": "May 2022",
+            "photoList": [
+                {"pid": "pid31", "imageURL": "images/picture-gallery/MannargudiTemple.jpg", "title": "Rajagopalaswamy Temple"},
+                {"pid": "pid32", "imageURL": "images/picture-gallery/MannargudiColumns.jpg", "title": "1000 Pillars Individually Carved"},
+                {"pid": "pid33", "imageURL": "images/picture-gallery/MannargudiElephant.jpg", "title": "Mannargudi Temple Elephant"}
+            ]
+        },
+        {"id": "b4", "name": "Vaduvoor", "title": "Asha's visit, Feb 16th 2022", 
+            "author": "Asha Sundararajan", "imageURL": "images/picture-gallery/MannargudiHaridraNadi.jpg",
+            "description": "Vaduvoor ramar, a small yet beautiful temple, ",
+            "description1": "My attimber grew up in Vaduvoor, and he, my attai, and his siblings have all decided to vall Vauduvoor their home.",
+            "description2": "Description 3",
+            "blogDate": "May 2022",
+            "photoList": [
+                {"pid": "pid41", "imageURL": "images/picture-gallery/MannargudiTemple.jpg", "title": "Rajagopalaswamy Temple"},
+                {"pid": "pid42", "imageURL": "images/picture-gallery/MannargudiColumns.jpg", "title": "1000 Pillars Individually Carved"},
+                {"pid": "pid43", "imageURL": "images/picture-gallery/MannargudiElephant.jpg", "title": "Mannargudi Temple Elephant"}
+            ]
         }
     ]
 }

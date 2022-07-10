@@ -12,7 +12,7 @@
         {"id": "c10", "name": "Edinborough", "country": "England", "aVillage": "false"},
         {"id": "c11", "name": "Hartford", "country": "USA", "aVillage": "false"},
         {"id": "c12", "name": "Kodavasal", "country": "India", "aVillage": "true", "imageURL": "images/RathaBandham.jpg"},
-        {"id": "c13", "name": "Kumbakonam", "country": "India", "aVillage": "true", "imageURL": "images/RathaBandham.jpg"},
+        {"id": "c13", "name": "Kumbakonam", "country": "India", "aVillage": "true", "imageURL": "images/picture-gallery/AdiVaraha.jpg"},
         {"id": "c14", "name": "London", "country": "England", "aVillage": "false"},
         {"id": "c15", "name": "Los Angeles", "country": "USA", "aVillage": "false"},
         {"id": "c16", "name": "Mannargudi", "country": "India", "aVillage": "true", "imageURL": "images/Mannargudi.jpg"},

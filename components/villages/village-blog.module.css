@@ -1,10 +1,12 @@
 .blogmain {
-    margin: 0 3rem;
+    margin: 0 4rem;
 }
 
 .blogtop {
     display: flex;
-    grid-gap: 2rem;
+    grid-gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .blog__bottom{
@@ -14,16 +16,20 @@
 .blogmain__left{
     color: red;
     width: 28rem;
-    border: 1px solid blue;
     text-align: center;
 }
 
-.blogmain__left h3{
-    margin: 1rem 0;
-}
 
 .blogmain__right{
-    width: auto;
+    max-width: 64rem;
+    /* background-color: antiquewhite; */
+    padding: 0 1rem;
+}
+
+.blogmain__right h3{
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
 }
 
 .image {
@@ -42,16 +48,32 @@
 }
 
 @media (max-width: 767px) {
+    .image {
+        width: 20rem;
+        height: 20rem;
+    }
+
     .blogmain__left {
-        width: 30rem;
-        height: 30rem;
+        width: 20rem;
+        margin: 0;
+        padding:0;
     }
 
     .blogtop{
-        display: block;
+        width: 24rem;
+        margin:0;
+        padding: 0;
     }
 
     .blogmain{
         margin: 0;
+        padding:0;
     }
+
+    .blogmain__right{
+        width: 24rem;
+        max-width: 24rem;
+        padding:0 0.5rem;
+    }
+
 }
