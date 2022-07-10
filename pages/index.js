@@ -13,9 +13,7 @@ export default function Home() {
       </Head>
 
       <div>
-        
           <EnterForm />
-        
       </div>
     </div>
   )
