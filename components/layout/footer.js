@@ -7,7 +7,7 @@ function FooterSection(){
         <footer className={classes.footer}>
              <div className={classes.footermenu}> 
                 <div className={classes.footercontentabout}>
-                    <h2>Acknowledgements</h2>
+                    <h2>Acknowledgements & Family Tree Maps</h2>
                     <hr style={{border: '1px solid red'}}/>
                     <ul>
                         <li key="kodavasal">
@@ -41,7 +41,7 @@ function FooterSection(){
                     </ul>
                 </div>
                 <div className={classes.footercontentothers}>
-                    <h3>More Info</h3>
+                    <h2>More Info</h2>
                     <hr style={{border: '1px solid red'}}/>
                     <ul>
                         <li key= "contribute">
@@ -68,7 +68,7 @@ function FooterSection(){
                     </ul> 
                 </div>
                 <div className={classes.footercontentothers}>
-                    <h3>Resources Used</h3>
+                    <h2>Resources Used</h2>
                     <hr style={{border: '1px solid red' , marginRight: '2rem'}}/>
                     <ul>
                     <li key= "flaticons">

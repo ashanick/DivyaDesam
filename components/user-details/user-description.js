@@ -4,6 +4,7 @@ import LinkList from '../users/linkList'
 import MemoriesGrid from '../memories/memories-grid'
 import PhotoGrid from '../memories/photo-grid'
 
+
 function UserDescription(props){
     // console.log('Descripton Props : ', props)
     const {siblings, grandParent, greatGrandParent, grandChildren, greatGreatGrandParent,
@@ -12,7 +13,7 @@ function UserDescription(props){
     const {memories} = props.memories
     const {photoList} = props.photoGallery
     // console.log('Photo Description : ', photoList)
-    const {earlydescription} = props.items.member[0]
+    const {personal1, personal2, professional1, professional2, additional1, additional2} = props.items.member[0]
 
     var siblingsState = false
     var grandParentState = false
@@ -140,7 +141,7 @@ function UserDescription(props){
                         {greatGreatGreatGrandParentState && 
                             <div className={classes.children}>
                                 <div>
-                                    <h3>Great Great Great Grand Parents</h3>
+                                    <h3>Third Great Grand Parents</h3>
                                     <ul className={classes.children}>
                                         {greatGreatGreatGrandParent.map((gc, index)=> 
                                             <LinkList key = {gc.name}
@@ -158,14 +159,32 @@ function UserDescription(props){
             }
             
             <div className={classes.bottommid}>
-                <h3>Early Description</h3>
-                <p>{earlydescription}</p>
-                <h3>Adult Life</h3>
+                <h3>Personal</h3>
+                { personal1 && 
+                    <div>
+                        <p>{personal1}</p>
+                        <p>{personal2}</p>
+                    </div>
+                }
+                <h3>Professonal</h3>
+                { personal1 && 
+                    <div>
+                        <p>{professional1}</p>
+                        <p>{professional2}</p>
+                    </div>
+                }
+                {additional1 && 
+                    <div>
+                        <p>{additional1}</p>
+                        <p>{additional2}</p>
+                    </div>
+                }
+{/* style={{backgroundColor: '#e8f3db'}} */}
                 {
                     memoryState && 
-                    <div>
-                        <div className={classes.user__mem_photo}>
-                            <h2>Memory Photo Stories</h2>
+                    <div style={{border: '1px solid green'}}>
+                        <div className={classes.user__mem_photo} >
+                            <h2 style={{color: 'green'}}>Evergreen Stories & Special Memories</h2>
                         </div>
                         <div className={classes.user__main}>   
                             <MemoriesGrid items={props.memories} />
@@ -174,7 +193,7 @@ function UserDescription(props){
                 }
                 {   photoState &&
                     <div>
-                        <hr style={{border: '1px solid red'}}/>
+                        {/* <hr style={{border: '1px solid red'}}/> */}
                         <div className={classes.user__mem_photo}>
                             <h2>Photo Gallery</h2>
                         </div>
@@ -248,7 +267,7 @@ function UserDescription(props){
                     {
                         greatGreatGreatGrandChildrenState && 
                         <div>
-                            <h3>Great Great Great Grand Children</h3>
+                            <h3>Third Great Grand Children</h3>
                             <ul className={classes.children}>
                                 {greatGreatGreatGrandChildren.map((gc, index)=> 
                                     <LinkList key = {gc.name}

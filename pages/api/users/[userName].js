@@ -84,22 +84,30 @@ export default function handler({query: {userName}}, res) {
                         var prof = ""
                         var education = ""
                         var school = ""
-                        var earlydescription = ""
+                        var personal1 = ""
+                        var personal2 = ""
                         var hobby = ""
                         var spouse = ""
                         var spouseImageURL = ""
-                        var adultdescription = ""
-                        var notes = ""
+                        var professional1 = ""
+                        var professional2 = ""
+                        var additional1 = ""
+                        var additional2 = ""
+                        var earlydescription = ''
+                        var adultdescription = ''
                         var dob = ''
                         if (record._fields[9]){
                             // console.log('Detail Record : ', record._fields[9])
                             prof = record._fields[9].properties.profession
                             education = record._fields[9].properties.education
                             school = record._fields[9].properties.school
-                            earlydescription = record._fields[9].properties.earlydescription
+                            personal1 = record._fields[9].properties.personal1
+                            personal2 = record._fields[9].properties.personal2
                             hobby = record._fields[9].properties.hobby
-                            notes = record._fields[9].properties.notes
-                            adultdescription = record._fields[9].properties.adultdescription
+                            additional1 = record._fields[9].properties.additional1
+                            additional2 = record._fields[9].properties.additional2
+                            professional1 = record._fields[9].properties.professional1
+                            professional2 = record._fields[9].properties.professional2
                             if (record._fields[9].properties.dob){
                                 dob = record._fields[9].properties.dob
                             } 
@@ -118,12 +126,11 @@ export default function handler({query: {userName}}, res) {
                             profession: prof,
                             education: education,
                             school: school,
-                            earlydescription: earlydescription,
                             hobby,
                             spouse,
                             spouseImageURL,
-                            notes,
-                            adultdescription,
+                            personal1, personal2, professional1, professional2,
+                            additional1, additional2,
                             dob
                         })
                         userNodes.push({
@@ -311,7 +318,7 @@ export default function handler({query: {userName}}, res) {
             const data =  {nodes:_.uniqBy(userNodes, "id"),
                     links: userLinks
                     }
-            // console.log('Details : ', memberDetail)
+            // console.log('Details : ', )
             
             const member = {member: memberDetail, 
                 children:_.uniqBy( children, "name"), grandChildren: _.uniqBy(grandChildren, "name"), 

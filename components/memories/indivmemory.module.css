@@ -1,0 +1,38 @@
+.im__container{
+    background-color:#c5e1a5;
+    width: 60rem;
+    height: 100%;
+    /* position: absolute; */
+    top: 12rem;
+    left: 1rem;
+}
+
+.im__topbar{
+    width: 100%;
+    height: 5rem;
+    background-color: yellow;
+    padding: 0 5rem;
+}
+
+.im__title{
+    width: 100%;
+    height: 5rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.im__return{
+    align-self: right;;
+    padding: 2rem 4rem;
+}
+
+.im__title h2{
+    color: red;
+}
+
+@media (max-width: 768px) {
+    .im__container{
+        width: 18rem;
+        max-width:18rem;
+    }
+}

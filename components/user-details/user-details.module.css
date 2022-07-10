@@ -42,7 +42,7 @@
 
 .detailsDate{
     display: flex;
-    grid-gap: 5px;
+    grid-gap: 8px;
     margin-top: -1rem;
     align-items: baseline;
 }
@@ -85,6 +85,11 @@
 
 .children ul{
     margin-top: -10px;;
+}
+
+.user__mem_photo{
+    justify-content: center;
+    text-align: center;
 }
 
 @media (max-width: 768px) {

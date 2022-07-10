@@ -10,14 +10,15 @@ function EnterForm(){
             <Link href="/homepage">
                 <a>
                     <h1>Welcome to 1000+ Iyengars</h1>
-                    <p>A compendium of Iyengars, including non-iyengars and non-Indians married to an Iyengar</p>
+                    <p>A compendium of Iyengars, including non-Iyengars and non-Indians married or born to an Iyengar</p>
 
                     <div>
                         <ul className={classes.enter__ul}>
                             <li>&rarr; 8+ generations from 1700 AD</li>
                             <li>&rarr; Individal details</li>
+                            <li>&rarr; Tagged memory and photo stories</li>
                             <li>&rarr; Clans of 5+ generations </li>
-                            <li>&rarr; Shows links between and 2 people</li>
+                            <li>&rarr; Search connections between any 2 people</li>
                         </ul>
                     </div>
 

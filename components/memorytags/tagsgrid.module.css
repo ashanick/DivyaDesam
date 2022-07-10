@@ -1,0 +1,12 @@
+.tags{
+    list-style: none;
+    padding: 0;
+    margin-left: -2rem;
+    max-width: 24rem;
+}
+
+.tag__grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

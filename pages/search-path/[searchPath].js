@@ -55,7 +55,8 @@ function SearchAll (){
 
     if (error) {
         return (
-            <div style={{margin: '5rem', textAlign: 'center'}}>
+            <div style={{ textItems: 'center', textAlign: 'center'}}>
+                <NewSearch />
                <h2> 💥💥💥💥💥💥 Oops Send valid Request 💥💥💥  </h2>
             </div>
         )

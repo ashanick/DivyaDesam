@@ -1,5 +1,5 @@
 import  classes from './memories-grid.module.css'
-import MemoriesItem from './memories-item'
+import MemoriesItem from '../memories-item'
 
 function MemoriesGrid(props){
     const {memories} = props.items

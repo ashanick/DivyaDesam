@@ -33,6 +33,7 @@ h2{
   color: red;
   font-family: 'Josefin Sans', sans-serif;
   margin-bottom: 0;
+  font-size: var(--font-size-lg); 
 }
 
 h3, h4{
@@ -56,9 +57,12 @@ p{
     font-size: larger; 
    }
 
-   h1, h2{
+   h1{
     font-size: var(--font-size-lg); 
    }
 
+   h2{
+    font-size: var(--font-size-md);
+   }
 
 }

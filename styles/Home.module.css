@@ -108,9 +108,43 @@
   margin-left: 0.5rem;
 }
 
+.im__container{
+  padding: 0 4rem;
+  text-align: center;
+}
+
+.im__main{
+  width: auto;
+  display:flex;
+  flex-wrap: wrap;
+  grid-gap: 1rem;
+  justify-content: center;
+}
+
+.im__left{
+  width: 24rem;
+  border: 1px solid red;
+  justify-content: center;
+  margin: 0;
+}
+
+.im__right{
+  border: 1px solid green;
+  min-width: 24rem;
+  max-width: 60rem;;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+
+  .im__container{
+    padding: 0;
+  }
+
+  .im__right{
+    width: 24rem;
   }
 }

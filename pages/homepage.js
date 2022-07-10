@@ -5,7 +5,7 @@ import HomePageComponent from '../components/homepage'
 function HomePageMain() {
     return (
         <div>
-            <WelcomeBanner />
+            {/* <WelcomeBanner /> */}
             <NewSearch type = "common"/>
             <HomePageComponent />
         </div>

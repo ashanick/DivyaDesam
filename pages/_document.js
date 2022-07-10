@@ -15,6 +15,8 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          {/* Here I am adding the modal wrapper */}
+          <div id="modal-root"></div>
         </body>
       </Html>
     )

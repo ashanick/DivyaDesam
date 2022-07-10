@@ -1,0 +1,30 @@
+.tg__li{
+    list-style: none;
+    width: 20rem;
+    margin-bottom: 1rem;
+}
+
+.ti__container{
+    align-self: center;
+    border: 1px solid red;
+}
+
+.ti__image{
+    width: 20rem;
+    height: 20rem;
+    border: 1px solid black;
+    overflow: hidden;
+    position: relative;
+}
+
+.ti__image img{
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    object-position:top;
+}
+
+.ti__image__info{
+    width: 100%;
+    box-sizing: border-box;
+}

@@ -10,11 +10,15 @@ function UserDetailTopSection(props) {
         profession, school, hobby} = props.items[0]
     const parents = props.parents
     const kids = props.kids
-    console.log('User top : ', props)
-    
+    console.log('User top : ', dob)
+    var tempdob = '01-01-2022'
     const imagePath=`/${imageURL}`
     const spouseImagePath = `/${spouseImageURL}`
-    const formattedDob = new Date(dob).toLocaleDateString('en-US', {
+    
+    if (!dob){
+        tempdob = dob
+    }
+    const formattedDob = new Date(tempdob).toLocaleDateString('en-US', {
         day: 'numeric',
         month: 'long',
         year: 'numeric'
@@ -96,6 +100,8 @@ function UserDetailTopSection(props) {
                             alt={name}
                             width={25}
                             height={25}
+                            // width={imagePath.width}
+                            // height={imagePath.height}
                             layout='responsive'
                             placeholder='empty'
                         />
@@ -124,15 +130,16 @@ function UserDetailTopSection(props) {
            </div>
            <div className={classes.topright}>
                 <div className={classes.detailsDate}>
-                    <h3>Education :</h3>
+                    <h3>Education </h3>
                     <p>{education}</p>
                 </div>
                 <div className={classes.detailsDate}>
-                    <h3>Profession :</h3>
+                    <h3>Profession </h3>
                     <p>{profession}</p>
                 </div>
                 <div className={classes.detailsDate}>
-                    <h3>Hobbies :</h3>
+                    <h3>Hobbies </h3>
+                    <p>{hobby}</p>
                 </div>
                 
            </div>

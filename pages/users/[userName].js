@@ -2,7 +2,6 @@ import { useRouter } from 'next/router';
 import useSWR from 'swr'
 import Head from "next/head"
 
-
 import AllUsersGraph from '../../components/overlayGraph/allusers-graph'
 import IndivUser from '../../components/users/indiv-user';
 import classes from '../../components/users/indiv-user.module.css'
