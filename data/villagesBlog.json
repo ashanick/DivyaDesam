@@ -31,7 +31,8 @@
             "photoList": [
                 {"pid": "pid31", "imageURL": "images/picture-gallery/MannargudiTemple.jpg", "title": "Rajagopalaswamy Temple"},
                 {"pid": "pid32", "imageURL": "images/picture-gallery/MannargudiColumns.jpg", "title": "1000 Pillars Individually Carved"},
-                {"pid": "pid33", "imageURL": "images/picture-gallery/MannargudiElephant.jpg", "title": "Mannargudi Temple Elephant"}
+                {"pid": "pid33", "imageURL": "images/picture-gallery/MannargudiElephant.jpg", "title": "Mannargudi Temple Elephant"},
+                {"pid": "pid34", "imageURL": "images/picture-gallery/KumbakonamRamSujatha.jpg", "title": "95-year Srinivasan, neighnor"}
             ]
         },
         {"id": "b4", "name": "Vaduvoor", "title": "Asha's visit, Feb 16th 2022", 
