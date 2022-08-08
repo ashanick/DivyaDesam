@@ -1,0 +1,19 @@
+{
+    "genesis": [
+        {
+            "id": "Photo Collection",
+            "imageURL": "/images/GenerationalDetails.jpg",
+            "description": "A collection of photos for a given event. Photo can belong to a member, or can be associated by tagging. "
+        },
+        {
+            "id": "Tagged Memories",
+            "imageURL": "/images/GenerationalDetails.jpg",
+            "description": "A memory has a cherished story shared by a family member, or a friend. Memories are tagged and do show links to associated individuals."
+        },
+        {
+            "id": "Find links between peopls",
+            "imageURL": "/images/GenerationalDetails.jpg",
+            "description": "You will always find many relationships between any two Iyengars. Here you can search for, and find the shortest connection between any 2 given individuals."
+        }
+    ]
+}

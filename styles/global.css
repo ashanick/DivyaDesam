@@ -1,0 +1,38 @@
+@tailwind components; 
+
+@layer components {
+    .bordercontainer {
+        @apply border-red-500 border-[1px] mb-2
+    }
+
+    .button{
+        @apply px-4 py-2 border 
+        rounded-full cursor-pointer hover:shadow-lg active:scale-95
+        active:bg-gray-100 transition transform duration-100 ease-out
+    }
+
+    .container {
+        @apply max-w-full mx-auto px-8 sm:px-16
+    }
+
+    .detailp{
+        @apply text-red-500 text-xl font-semibold 
+    }
+
+    .h1{
+        @apply text-3xl italic font-bold pb-2 text-red-600
+    }
+
+    .h2{
+        @apply text-2xl font-semibold pb-2 text-red-600
+    }
+    .h3{
+        @apply text-xl font-semibold  text-green-500
+    }
+    .p{
+        @apply text-sm
+    }
+    .listitems {
+        @apply flex cursor-pointer hover:scale-110 space-x-1 text-lg px-2
+    }
+}

@@ -1,0 +1,74 @@
+{
+    "villages": [
+        {
+            "id": "Aiyempettai",
+            "imageURL": "Mannargudi.jpg",
+            "descendants": 20,
+            "lat": "10.895987209810079",  
+            "long": "79.18738548335894"
+        },
+        {
+            "id": "Karur",
+            "imageURL": "Mannargudi.jpg",
+            "descendants": 20,
+            "lat": "11.031581793372373",  
+            "long": "78.0425905562997"
+        },
+        {
+            "id": "Kodavasal",
+            "imageURL": "Mannargudi.jpg",
+            "descendants": 20,
+            "lat": "10.854950926194613", 
+            "long": "79.48263495276548"
+        },
+        {
+            "id": "Kumbakonam",
+            "imageURL": "images/picture-gallery/AdiVaraha.jpg",
+            "descendants": 20,
+            "lat": "10.962348585746932",
+            "long": "79.37051445538692"
+        },
+        {
+            "id": "Mannargudi",
+            "imageURL": "Mannargudi.jpg",
+            "descendants": 20,
+            "lat": "10.668943286175283",
+            "long": "79.4435980886045"
+        },
+        {
+            "id": "Neduntheru",
+            "imageURL": "Mannargudi.jpg",
+            "descendants": 20,
+            "lat": "10.9251995",
+            "long": "79.2707947"
+        },
+        {
+            "id": "Sri Rangam",
+            "imageURL": "Mannargudi.jpg",
+            "descendants": 20,
+            "lat": "10.864821535651503", 
+            "long": "78.69040225097837"
+        },
+        {
+            "id": "Vaduvoor",
+            "imageURL": "Mannargudi.jpg",
+            "descendants": 20,
+            "lat": "10.699612719374258", 
+            "long" :"79.32448574373915"
+        },
+        {
+            "id": "Vazhyutoor",
+            "imageURL": "Mannargudi.jpg",
+            "descendants": 20,
+            "lat": "10.923663010673305", 
+            "long": "79.2142581742575"
+        },
+        {
+            "id": "Vipodu",
+            "imageURL": "Mannargudi.jpg",
+            "descendants": 20,
+            "lat": "12.816532082632342", 
+            "long": "79.65200432273004"
+        }
+    ]
+}

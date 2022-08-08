@@ -1,16 +1,17 @@
-import FooterSection from './footer'
-import './main-header'
-import MainHeader from './main-header'
+import Banner from "./Banner"
+import Footer from "./Footer"
+import Header from "./Header"
 
 function Layout(props) {
-    return (
-        <div >
-            <MainHeader />
-            <main >{props.children}</main>
-            <hr style={{border: '1px solid red', width: '99vw'}}/>
-            <FooterSection />
-        </div>
-    )
+  return (
+    <div>
+        <Header/>
+        <main >
+          {props.children}
+        </main>
+        <Footer />
+    </div>
+  )
 }
 
 export default Layout
