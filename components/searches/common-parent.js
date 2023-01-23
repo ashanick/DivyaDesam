@@ -7,7 +7,8 @@ function CommonParentSearch() {
 
     return(
         <div>
-            <SearchForm type='common' returnHandler={(e)=>getvalues(e)}/>
+            <SearchForm type='common' 
+                returnHandler={(e)=>getvalues(e)}/>
         </div>
     )
 }

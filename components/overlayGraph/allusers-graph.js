@@ -7,7 +7,7 @@ const NoSSRForceGraph = dynamic(() => import("../../lib/NoSSRForceGraph"), {
 
 function AllUsersGraph(props) {
     const graphData = props.items
-    // console.log('All Users Graph , ', props.items)
+    console.log('All Users Graph , ', graphData)
 
     if (!graphData) {
         return <div><h1>Opps waiting</h1></div>
